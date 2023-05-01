@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Tallam</title>
+  </head>
+  <body id="auth-body">
+    <header class="header" id="auth-header">
+      <div class="container">
+        <div class="header-wrapper">
+          <div class="header-row">
+            <a href="/" class="logo">Tallam</a>
+            <div class="header-row__title">
+              <h1 class="title-3">
+                Информационно-аналитическая <br />платформа
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="section auth-bg">
+      <div class="form-wrapper">
+        <form action="/auth/login" class="form-wrapper__form" method="POST">
+          <h2 class="form-wrapper__title">Войти в <strong>Tallam</strong></h2>
+          <input
+            id="email"
+            type="text"
+            class="form-wrapper__input"
+            placeholder="ЛОГИН"
+            name="email"
+          />
+
+          <input
+            id="password"
+            type="password"
+            class="form-wrapper__input"
+            placeholder="ПАРОЛЬ"
+            name="password"
+          />
+
+          <input
+            type="hidden"
+            name="_csrf"
+            value="9H2KxKRe-Q3ad3P0t9e6NzO82-QYTkoS9h0U"
+            id="token"
+          />
+
+          <div class="form-wrapper__btn-container">
+            <button type="submit" class="btn form-wrapper__enter">ВОЙТИ</button>
+            <a href="#!" class="form-wrapper__forgot"> Забыли пароль? </a>
+          </div>
+        </form>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="support">
+          <div class="support__title">
+            <h3>Техническая поддержка</h3>
+            <ul class="support__list">
+              <li class="support__items">
+                Эл. почта:<a href="mailto:webrush@mail.ru"> webrush@mail.ru</a>
+              </li>
+              <li class="support__items">
+                <!-- <img
+                  src="./img/icons/icons8-telegram.svg"
+                  class="support__items-icon"
+                  alt="Telegramm"
+                /> -->
+                Телеграмм чат:<a
+                  href="https://t.me/nakata_katsu"
+                  class="auth-link"
+                >
+                  Написать</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="copyright">
+            <p>©2020-2023, Tallam - Информационно-аналитическая платформа</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
