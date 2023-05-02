@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/main.css" />
     <title>Tallam</title>
   </head>
-  <body id="auth-body">
-    <header class="header" id="auth-header">
+  <body>
+    <header class="header">
       <div class="container">
         <div class="header-wrapper">
           <div class="header-row">
@@ -25,20 +25,37 @@
       <div class="form-wrapper">
         <form action="/auth/login" class="form-wrapper__form" method="POST">
           <h2 class="form-wrapper__title">Войти в <strong>Tallam</strong></h2>
+
+          <p class="txt-danger" id="danger-login">Некорректный логин</p>
+          <label for="login_i" id="login_i" class="visually-hidden">
+            Логин (email)</label
+          >
           <input
-            id="email"
-            type="text"
+            id="login_i"
+            type="email"
             class="form-wrapper__input"
             placeholder="ЛОГИН"
             name="email"
+            aria-labelledby="login_i"
+            aria-describedby="danger-login"
+            aria-required="true"
+            required
           />
 
+          <p class="txt-danger" id="danger-password">Неверный пароль</p>
+          <label for="password_i" id="password_i" class="visually-hidden">
+            Пароль</label
+          >
           <input
             id="password"
             type="password"
             class="form-wrapper__input"
             placeholder="ПАРОЛЬ"
             name="password"
+            aria-labelledby="password_i"
+            aria-describedby="danger-password"
+            aria-required="true"
+            required
           />
 
           <input
@@ -60,16 +77,11 @@
         <div class="support">
           <div class="support__title">
             <h3>Техническая поддержка</h3>
-            <ul class="support__list">
+            <ul class="support__list list-reset">
               <li class="support__items">
                 Эл. почта:<a href="mailto:webrush@mail.ru"> webrush@mail.ru</a>
               </li>
               <li class="support__items">
-                <!-- <img
-                  src="./img/icons/icons8-telegram.svg"
-                  class="support__items-icon"
-                  alt="Telegramm"
-                /> -->
                 Телеграмм чат:<a
                   href="https://t.me/nakata_katsu"
                   class="auth-link"
