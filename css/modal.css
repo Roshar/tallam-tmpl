@@ -1,0 +1,40 @@
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.modal__background {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.3);
+}
+.modal__content {
+  position: relative;
+  z-index: 10;
+  width: 70%;
+  max-width: 350px;
+  margin: 12% auto 0;
+  padding: 0.5em 1em;
+  background: white;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+  text-align: center;
+  border-radius: 5px;
+  border: none;
+}
+.modal__content h1 {
+  margin: 0;
+}
+.modal__action-buttons {
+  text-align: center;
+}
+
+.modal__title {
+  color: inherit;
+  font-size: 22px;
+}

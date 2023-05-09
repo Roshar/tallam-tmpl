@@ -7,26 +7,22 @@
     <title>Tallam</title>
   </head>
   <body>
-    <header class="header">
+    <header class="header header--auth">
       <div class="container">
-        <div class="header-wrapper">
-          <div class="header-row">
-            <a href="/" class="logo">Tallam</a>
-            <div class="header-row__title">
-              <h1 class="title-3">
-                Информационно-аналитическая <br />платформа
-              </h1>
-            </div>
-          </div>
-        </div>
+          <nav class="header__top-nav top-nav" aria-label="Основные разделы на странице">
+            <a href="" class="logo header__logo">
+              <p class="logo__title logo--large"><span class="logo__underline">Tallam</span> </p>
+              <p class="logo__desc">Информационно-аналитическая <br />платформа</p>
+            </a>
+         </nav>
       </div>
     </header>
-    <main class="section auth-bg">
-      <div class="form-wrapper">
-        <form action="/auth/login" class="form-wrapper__form" method="POST">
-          <h2 class="form-wrapper__title">Войти в <strong>Tallam</strong></h2>
-
-          <p class="txt-danger" id="danger-login">Некорректный логин</p>
+    <main class="main main--auth">
+      <div class="main__form-wrapper auth">
+        <h2 class="auth__title">Войти в <strong>Tallam</strong></h2>
+        <form action="/auth/login" class="auth__form " method="POST">
+          <!-- Утилитарные классы -->
+          <p class="txt-danger" id="danger-login">Некорректный логин</p> 
           <label for="login_i" id="login_i" class="visually-hidden">
             Логин (email)</label
           >
@@ -65,9 +61,9 @@
             id="token"
           />
 
-          <div class="form-wrapper__btn-container">
-            <button type="button" class="btn form-wrapper__enter">ВОЙТИ</button>
-            <a href="#!" class="form-wrapper__forgot"> Забыли пароль? </a>
+          <div class="auth__actions">
+            <button type="button" class="btn auth__btn-enter">ВОЙТИ</button>
+            <a href="#!" role="button" class="auth__link-forgot link"> Забыли пароль? </a>
           </div>
         </form>
       </div>
@@ -76,12 +72,12 @@
       <div class="container">
         <div class="support">
           <div class="support__title">
-            <h3>Техническая поддержка</h3>
+            <h2 class="support__title">Техническая поддержка</h3>
             <ul class="support__list list-reset">
-              <li class="support__items">
+              <li class="support__item">
                 Эл. почта:<a href="mailto:webrush@mail.ru"> webrush@mail.ru</a>
               </li>
-              <li class="support__items">
+              <li class="support__item">
                 Телеграмм чат:<a
                   href="https://t.me/nakata_katsu"
                   class="auth-link"
@@ -97,5 +93,20 @@
         </div>
       </div>
     </footer>
+    
+    <div class="modal none">
+      <div class="modal__background modal__overlay"></div>
+      <div class="modal__content">
+        <h2 class="modal__title">Восстановление пароля</h2>
+        <p class="modal__description">
+          Уважаемый пользователь! Если вы забыли пароль к своей учетной записи или столкнулись с другими проблемами, пожалуйста, свяжитесь с нами в 
+         <strong><a href="https://t.me/nakata_katsu" class="modal__link link">ТЕЛЕГРАММ</a></strong>.
+        </p>
+        <button class="btn modal__btn">Понятно</button>
+        <!-- <div class="modal__action-buttons modal__action-buttons--stacked">
+          <button class="btn modal__btn">Понятно</button>
+        </div> -->
+      </div>
+    </div>
   </body>
 </html>
