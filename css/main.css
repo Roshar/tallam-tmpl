@@ -5,14 +5,18 @@
 
 :root {
   --darkblue: #2e609a;
+  --linkblue: #487bb7;
+  --linkblue-hover: #6194d0;
   --lightblue: #c7d9ed;
   --black: #484343;
   --white: #fff;
   --borderColor: #52a1ff;
-  --darkgrey: #212529;
+  --darkgrey: #484343;
   --pureblue: #79a2d3;
 
   --accent: var(--darkblue);
+  --link-box-color: var(--linkblue);
+  --link-box-color-hover: var(--linkblue-hover);
   --page-bg-light: var(--lightblue);
   --text-color: var(--black);
   --link-hover: var(--pureblue);
@@ -45,8 +49,8 @@ body {
 
 .title-2 {
   margin-bottom: 20px;
-  color: var(--white);
-  font-size: 13px;
+  color: var(--darkgrey);
+  font-size: 24px;
   font-weight: 500;
 }
 
@@ -193,8 +197,6 @@ body {
 
 /* MAIN */
 
-/* Auth */
-
 .main--auth {
   min-height: 620px;
   background-color: var(--lightblue);
@@ -215,6 +217,54 @@ body {
   margin: 0 auto;
   opacity: 0.9;
 }
+
+.main__title {
+  text-align: center;
+  margin-top: 0;
+}
+
+/* VIDEO page */
+
+.main--video {
+  margin: 0 auto;
+  max-width: 560px;
+}
+
+.main__video-box {
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.youtube-video {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+}
+
+.main__project-list {
+  display: flex;
+  width: 100%;
+}
+.main__project-item {
+  width: 50%;
+}
+
+.main__project-link {
+  display: inline-block;
+  width: 100%;
+  padding: 3em 2em;
+  background-color: var(--link-box-color);
+  color: #ece7e7;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.2s ease-in;
+}
+
+.main__project-link:hover {
+  background-color: var(--link-box-color-hover);
+  color: white;
+}
+
+/* AUTH */
 
 .auth {
   background-color: var(--white);
@@ -249,7 +299,7 @@ input:focus {
   border: 1px solid var(--lightblue);
 }
 
-.form-wrapper__input {
+.auth__input {
   display: block;
   max-width: 100%;
   border: 1px solid #ced4da;
@@ -366,6 +416,34 @@ input:focus {
     min-height: 300px;
   }
 
+  .title-2 {
+    padding-bottom: 0;
+    font-size: 18px;
+  }
+
+  /* VIDEO */
+
+  .main__project-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main__project-item {
+    width: 100%;
+    position: relative;
+  }
+
+  .main__project-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background-color: #fff;
+    opacity: 0.2;
+  }
+
   /* FOOTER */
 
   .footer {
@@ -383,6 +461,10 @@ input:focus {
 
 @media (max-width: 520px) {
   /* MAIN */
+
+  .main {
+    padding: 30px 0;
+  }
 
   /* auth form */
 

@@ -20,7 +20,7 @@
     <main class="main main--auth">
       <div class="main__form-wrapper auth">
         <h2 class="auth__title">Войти в <strong>Tallam</strong></h2>
-        <form action="/auth/login" class="auth__form " method="POST">
+        <form action="/auth/login" class="auth__form" method="POST">
           <!-- Утилитарные классы -->
           <p class="txt-danger" id="danger-login">Некорректный логин</p> 
           <label for="login_i" id="login_i" class="visually-hidden">
@@ -29,7 +29,7 @@
           <input
             id="login_i"
             type="email"
-            class="form-wrapper__input"
+            class="auth__input"
             placeholder="ЛОГИН"
             name="email"
             aria-labelledby="login_i"
@@ -45,7 +45,7 @@
           <input
             id="password"
             type="password"
-            class="form-wrapper__input"
+            class="auth__input"
             placeholder="ПАРОЛЬ"
             name="password"
             aria-labelledby="password_i"
