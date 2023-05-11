@@ -1,0 +1,56 @@
+.table__responsive {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+}
+
+.table-teachers {
+}
+.table__information-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5em;
+}
+
+.table__title {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.table__content {
+  border-spacing: 0px;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table__th {
+  border: 1px solid #dad6d6;
+  border-bottom: 1px solid var(--borderColor);
+  padding: 14px 10px;
+  text-align: left;
+  color: var(--accent);
+}
+
+.table__td {
+  border: 1px solid #dad6d6;
+  padding: 14px 10px;
+}
+
+.table__link {
+  color: var(--link-box-color);
+  text-decoration: underline !important;
+}
+
+.table__link:hover {
+  color: var(--link-box-color-hover);
+  text-decoration: underline;
+}
+
+@media (max-width: 520px) {
+  .table__information-item {
+    text-align: center;
+  }
+}
