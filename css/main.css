@@ -5,6 +5,8 @@
 @import url("./table.css");
 @import url("./utility.css");
 
+
+
 :root {
   --darkblue: #2e609a;
   --linkblue: #487bb7;
@@ -40,6 +42,7 @@ body {
   margin: 0 auto;
   padding: 0 30px;
 }
+
 
 .title-1 {
   margin-bottom: 20px;
