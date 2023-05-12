@@ -1,3 +1,10 @@
+/* Table for marks */
+
+.table-marks {
+
+}
+
+
 .table__responsive {
   overflow-x: auto;
 }
@@ -6,8 +13,6 @@
   width: 100%;
 }
 
-.table-teachers {
-}
 .table__information-list {
   display: flex;
   flex-direction: column;
@@ -24,6 +29,10 @@
   border-spacing: 0px;
   border-collapse: collapse;
   width: 100%;
+}
+
+.table__tr {
+  transition: all .2s ease-in;
 }
 
 .table__th {

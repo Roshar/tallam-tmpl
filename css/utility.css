@@ -9,3 +9,9 @@
 .tar {
   text-align: right;
 }
+
+.hover-row:hover {
+  background-color: var(--linkblue-hover);
+  color: var(--white);
+  cursor: pointer;
+}

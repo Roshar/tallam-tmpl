@@ -318,17 +318,20 @@ body {
   color: white;
 }
 
-.main__form-filter {
-}
-.form-filter {
+/* FORM FILTER */
+
+.form-filter__options {
   display: flex;
   column-gap: 30px;
+  row-gap: 7px;
 }
-.visually-hidden {
+
+.form-filter__options {
+  margin-bottom:15px;
 }
-.form-filter__select-list {
-}
-.form-filter__option {
+
+.form-filter__btn-enter {
+width: 100%;
 }
 
 .form-filter__select-list {
@@ -352,7 +355,28 @@ body {
   -moz-appearance: none;
   appearance: none;
 }
+/* .form-filter__select-list {
+  margin: 40px;
+} */
 
+option.form-filter__option {
+  
+}
+
+.form-filter__option {
+  padding: 9px;
+  background-color: var(--white); 
+}
+
+/* select .form-filter__option:hover {
+
+  background-color: var(--accent); 
+  color: var(--white);
+} */
+
+/* select .form-filter__option:hover .form-filter__select-list {
+  padding: 0;
+} */
 /* AUTH */
 
 .auth {
@@ -425,6 +449,7 @@ input:focus {
 .link:hover {
   color: var(--link-hover);
 }
+
 
 /* FOOTER */
 
@@ -551,6 +576,12 @@ input:focus {
     width: 100%;
     background-color: #fff;
     opacity: 0.2;
+  }
+
+  /* FILTER FORM */
+
+  .form-filter__options {
+    flex-direction: column;
   }
 
   /* FOOTER */
