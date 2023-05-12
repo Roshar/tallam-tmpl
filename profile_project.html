@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Личный профиль в проекте "Анализ урока"</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="header__top-nav top-nav" aria-label="Основные разделы на странице">
+          <a href="" class="logo header__logo">
+            <p class="logo__title logo--small"><span class="logo__underline logo__underline--small">Tallam</span> </p>
+            <p class="logo__desc logo__desc--white">МБОУ “СОШ с.Виноградное”</p>
+          </a>
+          <ul class="header__menu-top menu-top list-reset">
+            <li class="menu-top__item"> <a href="#!" class="menu-list__link">Учителя</a></li>
+            <li class="menu-top__item"> <a href="#!" class="menu-list__link">Помощь</a></li>
+            <li class="menu-top__item"> <a href="#!" class="menu-list__link">Выйти</a></li>
+          </ul>
+       </nav>
+        </div> 
+    </header>
+    <section class="section-nav">
+        <div class="container">
+            <nav class="section-nav__second-nav second-nav">
+                <ul class="second-nav__list list-reset">
+                    <li class="second-nav__item"> <a href="#!" class="second-nav__link"> Добавить учителя в проект</a></li>
+                    <!-- <li class="second-nav__item"> <a href="#!" class="second-nav__link"> Добавить учителя в проект</a></li> -->
+                </ul>
+            </nav>
+        </div>
+    </section>
+    <main class="main">
+      <div class="container">
+        <h1 class="visually-hidden"> Личный профиль</h1>
+          <h2 class="main__title title-2">Личный профиль </h2>
+          <h2 class="main__title title-2">ФИО: АХМЕДОВ АХМЕД АХМЕДОВИЧ </h2>
+          <form action="" class="main__form-filter form-filter">
+            <label for="card-results-sourse" id="card-results-sourse" class="visually-hidden">
+                Выбрать тип оценки</label>
+                <select class="form-filter__select-list" name="card-results-sourse" id="card-results-sourse" >
+                    <option value="" class="form-filter__option"> -- Выбрать тип оценки</option>
+                    <option value="1" class="form-filter__option">Отобразить результаты внешней оценки</option>
+                    <option value="2" class="form-filter__option">Отобразить результаты внтуренней оценки</option>
+                </select>
+                <select class="form-filter__select-list" name="card-results-sourse" id="card-results-sourse" >
+                    <option value="" class="form-filter__option"> -- Выбрать тип оценки</option>
+                    <option value="1" class="form-filter__option">Отобразить результаты внешней оценки</option>
+                    <option value="2" class="form-filter__option">Отобразить результаты внтуренней оценки</option>
+                </select>
+              
+          </form>
+          <div class="main__wrapper  table table-teachers">
+              
+              <h4 class="table__title"> Список учителей участвующих в проекте</h4>
+           </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="support">
+          <div class="support__title">
+            <h2>Техническая поддержка</h3>
+            <ul class="support__list list-reset">
+              <li class="support__items">
+                Эл. почта:<a href="mailto:webrush@mail.ru"> webrush@mail.ru</a>
+              </li>
+              <li class="support__items">
+                Телеграмм чат:<a
+                  href="https://t.me/nakata_katsu"
+                  class="auth-link"
+                >
+                  Написать</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="copyright">
+            <p>©2020-2023, Tallam - Информационно-аналитическая платформа</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
