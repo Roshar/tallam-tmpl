@@ -3,13 +3,15 @@
 .main__card-actions {
   display: flex;
   align-items: center;
+  text-align: center;
+
+
 }
 
 .action__list {
   display: flex;
-  flex-wrap: wrap;
-  row-gap: 10px;
-  justify-content: space-between;
+  width: 100%;
+  column-gap: 10px;
 }
 
 .action__item {
@@ -20,15 +22,46 @@
 .action__print {
   width: 100%;
 }
+
+
+
 .action__download {
   width: 100%;
+
 }
+
 .action__send-to-mail {
   width: 100%;
+
 }
+
 .action__delete {
   width: 100%;
 }
+
+
+.main__card-actions {
+  display: flex;
+  align-items: center;
+}
+
+
+.action__list {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  justify-content: space-between;
+}
+
+
+@media (max-width:620px) {
+
+  .action__item {
+    display: block;
+    width: 100%;
+  }
+}
+
 
 @media print {
   .main__card-actions {
