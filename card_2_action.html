@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Оценка - комплексная карта</title>
 </head>
 
@@ -29,204 +30,252 @@
         <div class="container">
             <nav class="section-nav__second-nav second-nav">
                 <ul class="second-nav__list list-reset">
-                    <li class="second-nav__item"> <a href="#!" class="second-nav__link"> Вернуться к списку</a></li>
-                    <li class="second-nav__item"> <a href="#!" class="second-nav__link"> Оценить </a></li>
+                    <li class="second-nav__item"> <a href="/school/card/check/project/2/teacher/{{teacher_id}}" class="second-nav__link"> Вернуться к выбору карты</a></li>
+                    <li class="second-nav__item"> <a href="/" class="second-nav__link"> Вернуться на главную </a></li>
                 </ul>
             </nav>
         </div>
     </section>
     <main class="main">
         <div class="container">
+            <h1 class="main__title title-2">Оценить урок</h1>
+            <h2 class="main__title title-2">ФИО: {{surname}} {{firstname}} {{patronymic}}</h2>
+            <form  class="main__form-selection form-selection">
+                <div class="form-selection__block">
+                    <select class="form-selection__item form-selection__discipline"
+                        name="discipline_id" id="discipline">
+                        <!-- {{#if disciplineListByTeacherId}}
+                        {{#each disciplineListByTeacherId}} -->
+                        <!-- <option value="{{discipline_id}}">{{title_discipline}}</option> -->
+                        <!-- {{/each}}
+                        {{else}} -->
+                        <option class="form-selection__option" value="1"> Информатика</option>
+                        <option class="form-selection__option" value="1"> Математика</option>
+                        <!-- <option value="">Нет предмета</option> -->
+                        <!-- {{/if}} -->
+                    </select>
+                </div>
 
-            <h1 class="main__title title-2">Личный профиль </h1>
-            <h2 class="main__title title-2">ФИО: АХМЕДОВ АХМЕД АХМЕДОВИЧ </h2>
-            <div class="main__common-info table">
-                <table class="table__content table__common-info">
-                    <tr class="table__tr">
-                        <td class="table__td"> Дата</td>
-                        <td class="table__td"> 25 апреля 2023</td>
-                    </tr>
-                    <tr class="table__tr">
-                        <td class="table__td"> ФИО, должность субъекта оценивания урока</td>
-                        <td class="table__td"> Внтуришкольная</td>
-                    </tr>
-                    <tr class="table__tr">
-                        <td class="table__td"> Предмет</td>
-                        <td class="table__td"> Информатика</td>
-                    </tr>
-                    <tr class="table__tr">
-                        <td class="table__td"> Класс</td>
-                        <td class="table__td"> 5</td>
-                    </tr>
-                    <tr class="table__tr">
-                        <td class="table__td"> Тема</td>
-                        <td class="table__td"> Матрица</td>
-                    </tr>
-                </table>
-            </div>
+                <div class="form-selection__block">
+                    <select class="form-selection__item form-selection__class" name="class_id"  id="class_id" required >
+                        <option class="form-selection__option" value=""> Выберите класс</option>
+                        <option class="form-selection__option" value="1"> 1 класс </option>
+                        <option class="form-selection__option" value="2"> 2 класс </option>
+                        <option class="form-selection__option" value="3"> 3 класс </option>
+                        <option class="form-selection__option" value="4"> 4 класс </option>
+                        <option class="form-selection__option" value="5"> 5 класс </option>
+                        <option class="form-selection__option" value="6"> 6 класс </option>
+                        <option class="form-selection__option" value="7"> 7 класс </option>
+                        <option class="form-selection__option" value="8"> 8 класс </option>
+                        <option class="form-selection__option" value="9"> 9 класс </option>
+                        <option class="form-selection__option" value="10"> 10 класс </option>
+                        <option class="form-selection__option" value="11"> 11 класс </option>
+                    </select>
+                </div>
+
+                <div class="form-selection__block">
+                    <select class="form-selection__item form-selection__liter" name="liter_class"  id="liter_class">
+                        <option class="form-selection__option" value=""> Выбрать литер (при наличии) </option>
+                        <option class="form-selection__option" value="А"> А </option>
+                        <option class="form-selection__option" value="Б"> Б </option>
+                        <option class="form-selection__option" value="В"> В </option>
+                        <option class="form-selection__option" value="Г"> Г </option>
+                        <option class="form-selection__option" value="Д"> Д </option>
+                    </select>
+                </div>
+                
+                <div class="form-selection__block">
+                    <select class="form-selection__item form-selection__source" name="source_id"  id="sourse">
+                        <option class="form-selection__option" value="2" id="inside" data-inside="inside"> Внутришкольная оценка</option>
+                        <option class="form-selection__option" value="1" id="outside" data-outside="outside"> Внешняя оценка</option>
+                    </select> 
+                </div>
+                
+                <div class="form-selection__block">
+                    <label class="visually-hidden" for="date_create" id="date_create-label" >Дата и время</label>
+                    <input class="form-selection__item form-selection__input form-selection__date" type="date" id="date_create" placeholder="{{current_date}}"  name="date_create"  min="2019-01-01"
+                    aria-labelledby="date_create" required>
+                </div>
+
+                <div class="form-selection__block"> 
+                    <label class="visually-hidden" for="theme" id="thema-label"> Тема урока: </label>
+                    <input class="form-selection__item form-selection__input form-selection__theme" type="text" name="thema" id="thema" type="text" placeholder="Напишите тему урока" aria-labelledby="thema" required>
+                </div>
+            </form>
 
             <div class="main__card-info table">
                 <table class="table__content table__card-info">
-                    <thead class="print-none">
+
+                    <thead>
                         <tr class="table__tr">
-                            <th class="table__th">Критерии оценки урока (2 балла – признак проявляется в полной мере, но
-                                не регулярно, 1 балл – признак проявляется не в полной мере, 0 баллов – признак не
-                                проявляется в деятельности учителя на уроке), <br>(0 – 1 балл) - бинарная оценка,
-                                фиксирует наличие или отсутствие действия учителя, <br>- материал по теме урока не
-                                позволяет учителю организовать такую работу на уроке</th>
-                            <th class="table__th">Оценивание в баллах</th>
+                            <th class="table__th">Виды компетенций </th>
+                            <th class="table__th" >Оценка в баллах</th>
                         </tr>
                     </thead>
-
+                
                     <tbody>
-                        <tr class="table__tr print-show visually-hidden">
-                            <td class="table__td">Критерии оценки урока (2 балла – признак проявляется в полной мере, но
-                                не регулярно, 1 балл – признак проявляется не в полной мере, 0 баллов – признак не
-                                проявляется в деятельности учителя на уроке), <br>(0 – 1 балл) - бинарная оценка,
-                                фиксирует наличие или отсутствие действия учителя, <br>- материал по теме урока не
-                                позволяет учителю организовать такую работу на уроке</th>
-                            <td class="table__td">Оценивание в баллах</th>
+                        <tr class="table__tr">
+                            <td class="table__td"><strong>1. ПРЕДМЕТНЫЕ КОМПЕТЕНЦИИ</strong> </td>
+                            <td class="table__td"> <strong>макс. оценка 13 баллов</strong></td>
                         </tr>
-                        <!-- second block-->
+                        <tr class="table__tr">
+                            <td class="table__td">1.1. Учитель проводит урок по теме, которая соответствует теме в его рабочей программе и календарно-тематическом плане
+                            <i class='fas fa-question-circle' style='font-size:18px;color:#2e609a' >
+
+                                <div class="prompt">
+                                    <p><strong> 0 баллов:</strong> Тема урока не соответствует теме в РП и в КТП. Отсутствует локальный акт, в котором утверждено изменение темы урока в РП и КТП
+                                    </p>
+                                    <p><strong>1 балл: </strong>Тема урока соответствует теме в РП и КТП учителя</p>
+                                </div>
+                                </i>
+                            </td>
+                            <td class="table__td">
+                                <select class="form-select" name="k_1_1" id="k_1_1" required>
+                                    <option value=""  >Выбрать</option>
+                                    <option value="1">1</option>
+                                    <option value="0">0</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr class="table__tr">
+                            <td class="table__td td_list">1.2. Учитель направляет внимание учащихся на тему урока и на главные (новые) слова в ней
+                            <i class='fas fa-question-circle' style='font-size:18px;color:#2e609a' >
+                                <div class="prompt">
+                                    <p><strong> 0 баллов:</strong> Учитель не направляет внимание учащихся на запись темы урока на доске, не выделяет в ней главные слова, не обучает учащихся задавать вопросы по теме. Учитель не формулирует четко и ясно цель урока («Вы сегодня узнаете…», «Вы сегодня научитесь…»).
+                                        В конце урока учитель не использует запись темы на доске для подведения итогов, чтобы учащиеся назвали свои личные достижения в изучении этой темы («Кто из вас узнал что-то новое по этой теме урока? Чему удалось научиться, изучая эту тему? Где это вам пригодится?»).
+
+                                    </p>
+                                    <p><strong>1 балл: </strong>Учитель обращает внимание учащихся на тему урока и указывает главные слова в ней, четко и ясно формулирует цель урока («Вы сегодня узнаете…», «Вы сегодня научитесь…»). В конце урока учитель использует запись темы на доске для подведения итогов, чтобы учащиеся назвали свои личные достижения в изучении этой темы («Кто из вас узнал что-то новое по этой теме урока? Кто из вас научился делать что-то новое? Где это вам пригодится?»)</p>
+                                    <p><strong>2 балла: </strong>Учитель обращает внимание учащихся на тему урока. Учащиеся с помощью учителя учатся сами указывать главные слова в теме урока, задавать вопросы по теме, ставить учебную цель – чему научатся на уроке. В конце урока учитель использует запись темы на доске для подведения итогов, чтобы учащиеся назвали свои личные достижения в изучении этой темы («Кто из вас узнал что-то новое по этой теме урока? Кто из вас научился делать что-то новое? Где это вам пригодится?»)</p>
+                                </div>
+                                </i>
+                            </td>
+                            <td class="table__td">
+                                <select class="form-select" name="k_1_2" id="k_1_2" required>
+                                    <option value=""  >Выбрать</option>
+                                    <option value="2">2</option>
+                                    <option value="1">1</option>
+                                    <option value="0">0</option>
+                                </select>
+                            </td>
+                        </tr>
 
                         <tr class="table__tr">
-                            <td colspan="2" class="table__td tac bold">2. МЕТОДИЧЕСКИЕ КОМПЕТЕНЦИИ
+                            <td scope="row" class="table__td td_list">1.3. Учитель организует самостоятельную работу учащихся с учебником
+                            <i class='fas fa-question-circle' style='font-size:18px;color:#2e609a' >
+
+                                <div class="prompt">
+                                    <p><strong> 0 баллов:</strong> Учитель не организует самостоятельную работу учащихся с учебником: не предлагает учащимся самим найти нужную тему и задания в учебнике; не объясняет учащимся, какой материал дан в учебнике по теме урока (тексты, рисунки, таблицы, правила, задачи, вопросы и другое), зачем и как с ним работать. Учитель сам читает учащимся задание в учебнике и объясняет, чему они научатся, выполняя его
+
+                                    </p>
+                                    <p><strong>1 балл: </strong>Учитель организует самостоятельную работу учащихся с учебником. Учитель предлагает учащимся самим найти нужную тему и задания в учебнике. Учитель объясняет учащимся, какой материал дан в учебнике по теме урока (тексты, рисунки, таблицы, правила, задачи, вопросы и другое), зачем и как с ним работать. Учащиеся пробуют сами объяснить, чему научатся, выполняя задание из учебника</p>
+                                    <p><strong>2 балла: </strong>Учитель организует самостоятельную работу учащихся с учебником. Учитель предлагает учащимся самим найти нужную тему и задания в учебнике. Учитель обсуждает с учащимися, какой материал дан в учебнике по теме урока (тексты, рисунки, таблицы, правила, задачи, вопросы и другое), зачем и как с ним работать. Учащиеся пробуют сами объяснить, чему научатся, выполняя задание из учебника. Учитель предлагает учащимся разные задания из учебника (или разное их количество) с учетом индивидуальных особенностей и возможностей учащихся</p>
+                                </div>
+                                </i>
+                            </td>
+                            <td class="table__td">
+                                <select class="form-select" name="k_1_3" id="k_1_3" required>
+                                    <option value=""  >Выбрать</option>
+                                    <option value="2">2</option>
+                                    <option value="1">1</option>
+                                    <option value="0">0</option>
+                                </select>
                             </td>
                         </tr>
                         <tr class="table__tr">
-                            <td colspan="2" class="table__td bold"> Целеполагание на уроке</td>
-                        </tr>
-                        <tr class="table__tr">
-                            <td class="table__td">2.1. Учитель обучает учащихся ставить учебную цель, используя
-                                проблемные вопросы, смысловые догадки, метод ассоциаций и другое</td>
-                            <td class="table__td">{{k_2_1}}</td>
-                        </tr>
-                        <tr class="table__tr">
-                            <td class="table__td">2.2. Цель урока сформулирована так, что ее достижение можно проверить
+                            <td scope="row" class="table__td td_list">1.4. Учитель владеет материалом по теме урока
+                            <i class='fas fa-question-circle' style='font-size:18px;color:#2e609a' >
+
+                                <div class="prompt">
+                                    <p><strong> 0 баллов:</strong>Учитель недостаточно уверенно владеет материалом по теме урока; допускает неточности (ошибки), когда объясняет материал учащимся; дает не очень ясные указания, как действовать (алгоритмы действий). На уроке не хватает заданий на практическое применение знаний в учебных ситуациях и заданий на применение знаний в решении жизненных задач, близких учащимся (функциональная грамотность)
+                                    </p>
+                                    <p><strong>1 балл: </strong>Учитель уверенно владеет материалом по теме урока, не допускает неточностей (ошибок), четко объясняет материал учащимся; дает ясные указания, как действовать (алгоритмы действий). На уроке достаточно заданий на практическое применение знаний в учебных ситуациях, но не хватает заданий (вопросов) на применение знаний в решении жизненных задач, близких учащимся (функциональная грамотность)</p>
+                                    <p><strong>2 балла: </strong>Учитель уверенно и свободно владеет материалом по теме урока, не допускает неточностей (ошибок) при объяснении материала учащимся. В каждом задании учащиеся сами (с помощью учителя) называют действия, которые они учатся выполнять (алгоритмы действий). Учитель сочетает задания на практическое применение знаний в учебных ситуациях и задания на применение знаний в решении жизненных задач, близких учащимся (функциональная грамотность). Учитель включает в урок дифференцированные задания с учетом индивидуальных особенностей учащихся</p>
+                                </div>
+                                </i>
                             </td>
-                            <td class="table__td">{{k_2_2}}</td>
-                        </tr>
-                        <tr class="table__tr">
-                            <td class="table__td">2.3. Составлены критерии оценки деятельности и результатов учащихся на
-                                уроке</td>
-                            <td class="table__td">{{k_2_3}}</td>
-                        </tr>
-                        <tr class="table__tr">
-                            <td colspan="2" class="table__td bold">Организация деятельности учащихся на уроке</td>
-                        </tr>
-                        <tr class="table__tr">
-                            <td class="table__td">2.4. Учитель формирует положительную учебную мотивацию, интерес
-                                учащихся к теме урока</td>
-                            <td class="table__td">{{k_2_4}}</td>
-                        </tr>
-                        <tr class="table__tr">
-                            <td class="table__td">2.5. Учитель применяет
-                                приемы активизации познавательной деятельности учащихся и диалоговые технологии
+                            <td class="table__td">
+                                <select class="form-select" name="k_1_4" id="k_1_4" required >
+                                    <option value=""  >Выбрать</option>
+                                    <option value="2">2</option>
+                                    <option value="1">1</option>
+                                    <option value="0">0</option>
+                                </select>
                             </td>
-                            <td class="table__td">{{k_2_5}}</td>
-                        </tr>
-                        <tr class="table__tr">
-                            <td class="table__td">2.6. Учитель организует самостоятельную работу учащихся с учебником
-                            </td>
-                            <td class="table__td">{{k_2_6}}</td>
-                        </tr>
-                        <tr class="table__tr">
-                            <td class="table__td">2.7. Учитель формирует универсальные учебные действия учащихся на
-                                предметном материале урока</td>
-                            <td class="table__td">{{k_2_7}}</td>
-                        </tr>
-                        <tr class="table__tr">
-                            <td class="table__td">2.8. Учитель использует разнообразные способы и средства обратной
-                                связи с учащимися</td>
-                            <td class="table__td">{{k_2_8}}</td>
-                        </tr>
-                        <tr class="table__tr">
-                            <td class="table__td">2.9. Учитель организует разнообразные формы учебного сотрудничества
-                                учащихся</td>
-                            <td class="table__td">{{k_2_9}}</td>
-                        </tr>
-                        <tr class="table__tr">
-                            <td class="table__td">2.10.* На уроке организована проектная деятельность учащихся</td>
-                            <td class="table__td">{{../specialVal.k_2_10}}</td>
-                        </tr>
-                        <tr class="table__tr">
-                            <td class="table__td">2.11.* На уроке организована учебно-исследовательская деятельность
-                                учащихся</td>
-                            <td class="table__td">{{../specialVal.k_2_11}}</td>
-                        </tr>
-                        <tr class="table__tr">
-                            <td colspan="2" class="table__td bold">Оценка и рефлексия на уроке</td>
-                        </tr>
-                        <tr class="table__tr">
-                            <td class="table__td">2.12. Учитель применяет на уроке приемы формирующего оценивания
-                                (задания на самооценку, рефлексивные вопросы, которые помогают учащимся осознать свои
-                                затруднения и достижения на уроке)</td>
-                            <td class="table__td">{{k_2_12}}</td>
-                        </tr>
-                        <tr class="table__tr">
-                            <td class="table__td">2.13. Учитель оценивает выполнение заданий на уроке учащимися на
-                                основе критериев оценки</td>
-                            <td class="table__td">{{k_2_13}}</td>
-                        </tr>
-                        <tr class="table__tr">
-                            <td class="table__td">2.14. Учитель комментирует выставленные отметки</td>
-                            <td class="table__td">{{k_2_14}}</td>
-                        </tr>
-                        <tr class="table__tr">
-                            <td class="table__td">2.15. Учитель организует на уроке рефлексию учащихся с учетом их
-                                возрастных особенностей </td>
-                            <td class="table__td">{{k_2_15}}</td>
-                        </tr>
-                        <tr class="table__tr">
-                            <td colspan="2" class="table__td bold">Информационное и техническое обеспечение урока </td>
-                        </tr>
-                        <tr class="table__tr">
-                            <td class="table__td">2.16. Учитель использует наглядность (знаково-символические средства,
-                                модели и другое)</td>
-                            <td class="table__td">{{k_2_16}}</td>
-                        </tr>
-                        <tr class="table__tr">
-                            <td class="table__td">2.17. Учитель организует работу учащихся с разнообразным учебным
-                                материалом (тексты, таблица, схема, график, видео, аудио)</td>
-                            <td class="table__td">{{k_2_17}}</td>
-                        </tr>
-                        <tr class="table__tr">
-                            <td class="table__td">2.18. Учитель использует на уроке электронные учебные материалы и
-                                ресурсы Интернета</td>
-                            <td class="table__td">{{k_2_18}}</td>
-                        </tr>
-                        <tr class="table__tr">
-                            <td class="table__td">2.19.* Учитель использует ИКТ-технологии</td>
-                            <td class="table__td">{{../specialVal.k_2_19}}</td>
-                        </tr>
-                        <tr class="table__tr">
-                            <td class="table__td">2.20. * Учитель использует разнообразные справочные материалы
-                                (словари, энциклопедии,
-                                справочники)
-                            </td>
-                            <td class="table__td">{{../specialVal.k_2_20}}</td>
-                        </tr>
-                        <tr class="table__tr">
-                            <td colspan="2" class="table__td bold">Обеспечение условий охраны здоровья учащихся (0 – 3
-                                балла)</td>
-                        </tr>
-                        <tr class="table__tr">
-                            <td class="table__td">2.21. Учитель чередует различные виды деятельности учащихся, соблюдая
-                                требования СанПиН и СП</td>
-                            <td class="table__td">{{k_2_21}}</td>
-                        </tr>
-                        <tr class="table__tr">
-                            <td class="table__td">2.22. Учитель включает в урок динамические паузы (физкультминутки),
-                                проводит комплекс упражнений для профилактики сколиоза, утомления глаз учащихся</td>
-                            <td class="table__td">{{k_2_22}}</td>
-                        </tr>
-                        <tr class=" table__tr final-tr  {{../resultSecond.levelStyle}}">
-                            <td class="table__td tac">Результат:<br><span>100-75% - выше базового, 74-50% - базовый
-                                    уровень, 49-0% - ниже базового </span></td>
-                            <td class="table__td tac">{{../secondInterest}} % <br><span class="print-none">
-                                    {{../resultSecond.level}}</span></td>
                         </tr>
 
+                        <tr class="table__tr">
+                            <td scope="row" class="table__td td_list">1.5. Учитель обучает учащихся работать с ошибками
+                            <i class='fas fa-question-circle' style='font-size:18px;color:#2e609a' >
+
+                                <div class="prompt">
+                                    <p><strong> 0 баллов:</strong> Учитель не замечает и не исправляет ошибки учащихся
+                                    </p>
+                                    <p><strong>1 балл: </strong>Учитель сам исправляет и объясняет ошибки учащихся</p>
+                                    <p><strong>2 балла: </strong>Учитель замечает ошибки учащихся и предлагает учащимся сначала попробовать самим найти ошибки, объяснить их и исправить. После этого учитель сам уточняет и дополняет объяснение ошибок учащихся</p>
+                                </div>
+                                </i>
+                            </td>
+                            <td class="table__td">
+                                <select class="form-select" name="k_1_5" id="k_1_5"  required>
+                                    <option value=""  >Выбрать</option>
+                                    <option value="2">2</option>
+                                    <option value="1">1</option>
+                                    <option value="0">0</option>
+                                </select>
+                            </td>
+                        </tr>
+
+                        <tr class="table__tr">
+                            <td scope="row" class="table__td td_list">1.6. Учитель обучает учащихся устанавливать связи между знаниями по теме урока и знаниями из других тем (внутрипредметные связи)
+                            <i class='fas fa-question-circle' style='font-size:18px;color:#2e609a' >
+
+                                <div class="prompt">
+                                    <p><strong> 0 баллов:</strong> Учитель не обучает учащихся устанавливать связи между знаниями по теме урока и знаниями из других тем. Учитель не включает в урок вопросы и задания на повторение знаний и умений, применение которых помогает учащимся усвоить знания и умения по теме урока
+                                    </p>
+                                    <p><strong>1 балл: </strong>Учитель сам объясняет учащимся, как связаны знания по теме урока со знаниями из других тем.  Учитель включает в урок вопросы и задания на повторение знаний и умений, применение которых помогает учащимся усвоить знания и умения по теме урока</p>
+                                    <p><strong>2 балла: </strong>Учитель обучает учащихся устанавливать связи между знаниями по теме урока и знаниями из других тем. Учитель включает в урок вопросы и задания на повторение знаний и умений, применение которых помогает учащимся усвоить знания и умения по теме урока</p>
+                                </div>
+                                </i>
+                            </td>
+                            <td class="table__td">
+                                <select class="form-select" name="k_1_6" id="k_1_6" required>
+                                    <option value=""  >Выбрать</option>
+                                    <option value="2">2</option>
+                                    <option value="1">1</option>
+                                    <option value="0">0</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr class="table__tr">
+                            <td scope="row" class=" table__tdtd_list">1.7.* Учитель обучает учащихся устанавливать связи между знаниями по теме урока и знаниями из других учебных предметов (межпредметные связи)
+
+                            <i class='fas fa-question-circle' style='font-size:18px;color:#2e609a' >
+
+                                <div class="prompt">
+                                    <p><strong> 0 баллов:</strong>
+                                        Учитель не обучает учащихся устанавливать связи между знаниями по теме урока и знаниями из других учебных предметов. Учитель не предлагает учащимся комплексные вопросы и задания на применение и синтез знаний и умений из разных учебных предметов
+                                    </p>
+                                    <p><strong>1 балл: </strong>Учитель сам объясняет учащимся, с какими знаниями и умениями из других учебных предметов связана тема урока</p>
+
+                                    <p><strong>2 балла: </strong> Учитель включает в урок вопросы и задания, с помощью которых учащиеся учатся сами устанавливать (исследовать, открывать) связи между знаниями по теме урока и знаниями из других учебных предметов. Учитель включает в урок межпредметные задания и задания на применение знаний и умений в повседневных жизненных ситуациях, понятных учащимся</p>
+                                        <p><strong><span style="font-size:1.5em"> - </span> : </strong>Если материал по теме урока не позволяет учителю организовать такую работу на уроке, вместо баллов нужно поставить прочерк</p>
+                                </div>
+                                </i>
+                            </td>
+                            <td class="table__td">
+                                <select class="form-select" name="k_1_7" id="k_1_7" required>
+                                    <option value=""  >Выбрать</option>
+                                    <option value="2">2</option>
+                                    <option value="1">1</option>
+                                    <option value="-1">0</option>
+                                    <option value="0">-</option>
+                                </select>
+                            </td>
+                        </tr>
+
+                            <!-- secon block-->
+                        
                     </tbody>
                 </table>
             </div>
@@ -305,6 +354,46 @@
             </div>
         </div>
     </footer>
+    <script>
+        $('[data-toggle="popover"]').popover();
+
+        let op = $('#hidden-block');
+        $("#sourse").change(function(){       
+        if($(this).find(':selected').attr('id') == "outside"){
+            op.removeClass('hidden-block')
+
+        }else {
+            op.addClass('hidden-block')
+        }   
+        });
+
+        let collection = document.querySelectorAll('.fa-question-circle');
+
+
+        for(let i = 0; i < collection.length; i++ ) {
+        collection[i].addEventListener('click', (e) => {
+            let infoBlock =  e.currentTarget.getElementsByTagName('div')[0].innerHTML
+            provideInModal(infoBlock)
+        })
+        }
+
+        const provideInModal = function (content) {
+
+        var theDiv = document.getElementById("modal-body");
+
+
+        theDiv.getElementsByTagName('p')
+
+        if (theDiv.children.length) {
+            theDiv.innerHTML = ''
+        }
+
+        theDiv.insertAdjacentHTML("afterBegin", content);
+        document.getElementById("btn-o").click()
+
+        }
+
+    </script>
 </body>
 
 </html>

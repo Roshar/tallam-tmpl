@@ -1,3 +1,51 @@
+/* FORM FILTER */
+
+.form-filter__options {
+  display: flex;
+  column-gap: 30px;
+  row-gap: 7px;
+}
+
+.form-filter__options {
+  margin-bottom: 15px;
+}
+
+.form-filter__btn-enter {
+  width: 100%;
+}
+
+.form-filter__select-list,
+.form-selection__item {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 2.25rem 0.375rem 0.75rem;
+  -moz-padding-start: calc(0.75rem - 3px);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-image: url();
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 16px 12px;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* .form-filter__select-list {
+  margin: 40px;
+} */
+
+.form-filter__option {
+  padding: 9px;
+  background-color: var(--white);
+}
+
 /* CARDS*/
 
 .main__card-actions {
@@ -43,6 +91,40 @@
   flex-wrap: wrap;
   row-gap: 10px;
   justify-content: space-between;
+}
+
+/* FORM ACTION*/
+
+.main__form-selection {
+  margin: 0 auto;
+  max-width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 10px;
+  justify-content: space-between;
+}
+.form-selection {
+}
+.form-selection__block {
+  width: 48%;
+}
+.form-selection__discipline {
+}
+.form-selection__option {
+}
+.form-selection__class {
+}
+.form-selection__liter {
+}
+.form-selection__source {
+}
+.form-selection__date {
+}
+.visually-hidden {
+}
+.form-control {
+}
+.form-selection__theme {
 }
 
 @media (max-width: 620px) {
