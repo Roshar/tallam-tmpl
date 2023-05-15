@@ -91,43 +91,57 @@
                         <!-- block for print --end -->
 
                         <!-- first block -->
-                        <tr>
-                            <td colspan="2" class="own-table-align-center" style="font-weight:bold"> 1. ПРЕДМЕТНЫЕ КОМПЕТЕНЦИИ </td>
+                        <tr class="table__tr">
+                            <td class="table__td tac bold" colspan="2"> 1. ПРЕДМЕТНЫЕ
+                                КОМПЕТЕНЦИИ </td>
                         </tr>
-                        <tr>
-                            <td>1.1. Учитель проводит урок по теме, которая соответствует теме в его Рабочей программе и Календарно-тематическом плане</td>
-                            <td class="fix-width">{{k_1_1}}</td>
+                        <tr class="table__tr">
+                            <td class="table__td">1.1. Учитель проводит урок по теме, которая соответствует теме в его
+                                Рабочей программе и
+                                Календарно-тематическом плане</td>
+                            <td class="table__td">{{k_1_1}}</td>
                         </tr>
-                        <tr>
-                            <td>1.2. Учитель направляет внимание учащихся на тему урока и на главные (новые) слова в ней</td>
-                            <td class="fix-width">{{k_1_2}}</td>
+                        <tr class="table__tr">
+                            <td class="table__td">1.2. Учитель направляет внимание учащихся на тему урока и на главные
+                                (новые) слова в ней
+                            </td>
+                            <td class="table__td">{{k_1_2}}</td>
                         </tr>
-                        <tr>
-                            <td>1.3. Учитель организует самостоятельную работу учащихся с учебником </td>
-                            <td class="fix-width">{{k_1_3}}</td>
+                        <tr class="table__tr">
+                            <td class="table__td">1.3. Учитель организует самостоятельную работу учащихся с учебником
+                            </td>
+                            <td class="table__td">{{k_1_3}}</td>
                         </tr>
-                        <tr>
-                            <td>1.4. Учитель владеет материалом по теме урока</td>
-                            <td class="fix-width">{{k_1_4}}</td>
+                        <tr class="table__tr">
+                            <td class="table__td">1.4. Учитель владеет материалом по теме урока</td>
+                            <td class="table__td">{{k_1_4}}</td>
                         </tr>
-                        <tr>
-                            <td>1.5. Учитель обучает учащихся работать с ошибками </td>
-                            <td class="fix-width">{{k_1_5}}</td>
+                        <tr class="table__tr">
+                            <td class="table__td">1.5. Учитель обучает учащихся работать с ошибками </td>
+                            <td class="table__td">{{k_1_5}}</td>
                         </tr>
-                        <tr>
-                            <td>1.6. Учитель обучает учащихся устанавливать связи между знаниями по теме урока и знаниями из других тем (внутрипредметные связи) </td>
-                            <td class="fix-width">{{k_1_6}}</td>
+                        <tr class="table__tr">
+                            <td class="table__td"> 1.6. Учитель обучает учащихся устанавливать связи между знаниями по
+                                теме урока и
+                                знаниями из других тем (внутрипредметные связи) </td>
+                            <td class="table__td">{{k_1_6}}</td>
                         </tr>
-                        <tr table__tr>
-                            <td>1.7.* Учитель обучает учащихся устанавливать связи между знаниями по теме урока и знаниями из других учебных предметов (межпредметные связи)</td>
-                            <td class="fix-width">{{ ../specialVal.k_1_7}}</td>
+                        <tr class="table__tr">
+                            <td class="table__td">1.7.* Учитель обучает учащихся устанавливать связи между знаниями по
+                                теме урока и
+                                знаниями из других учебных предметов (межпредметные связи)</td>
+                            <td class="table__td">{{ ../specialVal.k_1_7}}</td>
                         </tr>
-                        <tr class=" final-tr  {{../resultFirst.levelStyle}}">
-                                <td class="tg-c3ow own-table-align-center" >Результат:<br><span style="font-weight:bold;font-style:italic;font-size:.8em" >100-75% - выше базового,  74-50% - базовый уровень, 49-0% - ниже базового </span></td>
-                                <td class="tg-0pky own-table-align-center align-middle fix-width">{{../firstInterest}} % <br><span style="font-size:.8em" class="print-none"> {{../resultFirst.level}}</span></td>
+                        <tr class=" table__td tac  {{../resultFirst.levelStyle}}">
+                            <td>Результат:<br><span>100-75% - выше базового,
+                                    74-50% - базовый уровень, 49-0% - ниже базового </span></td>
+                            <td class="table__td tac">{{../firstInterest}} %
+                                <br><span class="print-none"> {{../resultFirst.level}}</span>
+                            </td>
                         </tr>
 
-                     <!-- second block-->
+
+                        <!-- second block-->
 
                         <tr class="table__tr">
                             <td colspan="2" class="table__td tac bold">2. МЕТОДИЧЕСКИЕ КОМПЕТЕНЦИИ
@@ -139,17 +153,17 @@
                         <tr class="table__tr">
                             <td class="table__td">2.1. Учитель обучает учащихся ставить учебную цель, используя
                                 проблемные вопросы, смысловые догадки, метод ассоциаций и другое</td>
-                            <td class="table__td">1</td>
+                            <td class="table__td">{{k_2_1}}</td>
                         </tr>
                         <tr class="table__tr">
                             <td class="table__td">2.2. Цель урока сформулирована так, что ее достижение можно проверить
                             </td>
-                            <td class="table__td">1</td>
+                            <td class="table__td">{{k_2_2}}</td>
                         </tr>
                         <tr class="table__tr">
                             <td class="table__td">2.3. Составлены критерии оценки деятельности и результатов учащихся на
                                 уроке</td>
-                            <td class="table__td">1</td>
+                            <td class="table__td">{{k_2_3}}</td>
                         </tr>
                         <tr class="table__tr">
                             <td colspan="2" class="table__td bold">Организация деятельности учащихся на уроке</td>
@@ -157,42 +171,42 @@
                         <tr class="table__tr">
                             <td class="table__td">2.4. Учитель формирует положительную учебную мотивацию, интерес
                                 учащихся к теме урока</td>
-                            <td class="table__td">0</td>
+                            <td class="table__td">{{k_2_4}}</td>
                         </tr>
                         <tr class="table__tr">
                             <td class="table__td">2.5. Учитель применяет
                                 приемы активизации познавательной деятельности учащихся и диалоговые технологии
                             </td>
-                            <td class="table__td">0</td>
+                            <td class="table__td">{{k_2_5}}</td>
                         </tr>
                         <tr class="table__tr">
                             <td class="table__td">2.6. Учитель организует самостоятельную работу учащихся с учебником
                             </td>
-                            <td class="table__td">1</td>
+                            <td class="table__td">{{k_2_6}}</td>
                         </tr>
                         <tr class="table__tr">
                             <td class="table__td">2.7. Учитель формирует универсальные учебные действия учащихся на
                                 предметном материале урока</td>
-                            <td class="table__td">2</td>
+                            <td class="table__td">{{k_2_7}}</td>
                         </tr>
                         <tr class="table__tr">
                             <td class="table__td">2.8. Учитель использует разнообразные способы и средства обратной
                                 связи с учащимися</td>
-                            <td class="table__td">2</td>
+                            <td class="table__td">{{k_2_8}}</td>
                         </tr>
                         <tr class="table__tr">
                             <td class="table__td">2.9. Учитель организует разнообразные формы учебного сотрудничества
                                 учащихся</td>
-                            <td class="table__td">2</td>
+                            <td class="table__td">{{k_2_9}}</td>
                         </tr>
                         <tr class="table__tr">
                             <td class="table__td">2.10.* На уроке организована проектная деятельность учащихся</td>
-                            <td class="table__td">-</td>
+                            <td class="table__td">{{../specialVal.k_2_10}}</td>
                         </tr>
                         <tr class="table__tr">
                             <td class="table__td">2.11.* На уроке организована учебно-исследовательская деятельность
                                 учащихся</td>
-                            <td class="table__td">-</td>
+                            <td class="table__td">{{../specialVal.k_2_11}}</td>
                         </tr>
                         <tr class="table__tr">
                             <td colspan="2" class="table__td bold">Оценка и рефлексия на уроке</td>
@@ -201,21 +215,21 @@
                             <td class="table__td">2.12. Учитель применяет на уроке приемы формирующего оценивания
                                 (задания на самооценку, рефлексивные вопросы, которые помогают учащимся осознать свои
                                 затруднения и достижения на уроке)</td>
-                            <td class="table__td">1</td>
+                            <td class="table__td">{{k_2_12}}</td>
                         </tr>
                         <tr class="table__tr">
                             <td class="table__td">2.13. Учитель оценивает выполнение заданий на уроке учащимися на
                                 основе критериев оценки</td>
-                            <td class="table__td">2</td>
+                            <td class="table__td">{{k_2_13}}</td>
                         </tr>
                         <tr class="table__tr">
                             <td class="table__td">2.14. Учитель комментирует выставленные отметки</td>
-                            <td class="table__td">0</td>
+                            <td class="table__td">{{k_2_14}}</td>
                         </tr>
                         <tr class="table__tr">
                             <td class="table__td">2.15. Учитель организует на уроке рефлексию учащихся с учетом их
                                 возрастных особенностей </td>
-                            <td class="table__td">2</td>
+                            <td class="table__td">{{k_2_15}}</td>
                         </tr>
                         <tr class="table__tr">
                             <td colspan="2" class="table__td bold">Информационное и техническое обеспечение урока </td>
@@ -223,28 +237,28 @@
                         <tr class="table__tr">
                             <td class="table__td">2.16. Учитель использует наглядность (знаково-символические средства,
                                 модели и другое)</td>
-                            <td class="table__td">1</td>
+                            <td class="table__td">{{k_2_16}}</td>
                         </tr>
                         <tr class="table__tr">
                             <td class="table__td">2.17. Учитель организует работу учащихся с разнообразным учебным
                                 материалом (тексты, таблица, схема, график, видео, аудио)</td>
-                            <td class="table__td">2</td>
+                            <td class="table__td">{{k_2_17}}</td>
                         </tr>
                         <tr class="table__tr">
                             <td class="table__td">2.18. Учитель использует на уроке электронные учебные материалы и
                                 ресурсы Интернета</td>
-                            <td class="table__td">1</td>
+                            <td class="table__td">{{k_2_18}}</td>
                         </tr>
                         <tr class="table__tr">
                             <td class="table__td">2.19.* Учитель использует ИКТ-технологии</td>
-                            <td class="table__td">-</td>
+                            <td class="table__td">{{../specialVal.k_2_19}}</td>
                         </tr>
                         <tr class="table__tr">
                             <td class="table__td">2.20. * Учитель использует разнообразные справочные материалы
                                 (словари, энциклопедии,
                                 справочники)
                             </td>
-                            <td class="table__td">-</td>
+                            <td class="table__td">{{../specialVal.k_2_20}}</td>
                         </tr>
                         <tr class="table__tr">
                             <td colspan="2" class="table__td bold">Обеспечение условий охраны здоровья учащихся (0 – 3
@@ -253,18 +267,20 @@
                         <tr class="table__tr">
                             <td class="table__td">2.21. Учитель чередует различные виды деятельности учащихся, соблюдая
                                 требования СанПиН и СП</td>
-                            <td class="table__td">1</td>
+                            <td class="table__td">{{k_2_21}}</td>
                         </tr>
                         <tr class="table__tr">
                             <td class="table__td">2.22. Учитель включает в урок динамические паузы (физкультминутки),
                                 проводит комплекс упражнений для профилактики сколиоза, утомления глаз учащихся</td>
-                            <td class="table__td">2</td>
+                            <td class="table__td">{{k_2_22}}</td>
                         </tr>
-                        <tr class=" table__tr final-tr  good-bg">
+                        <tr class=" table__tr final-tr  {{../resultSecond.levelStyle}}">
                             <td class="table__td tac">Результат:<br><span>100-75% - выше базового, 74-50% - базовый
                                     уровень, 49-0% - ниже базового </span></td>
-                            <td class="table__td tac">67 % <br><span class="print-none"> Базовый уровень</span></td>
+                            <td class="table__td tac">{{../secondInterest}} % <br><span class="print-none">
+                                    {{../resultSecond.level}}</span></td>
                         </tr>
+                        <!-- third block -->
 
                     </tbody>
                 </table>
