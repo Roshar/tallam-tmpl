@@ -4,8 +4,6 @@
   display: flex;
   align-items: center;
   text-align: center;
-
-
 }
 
 .action__list {
@@ -23,28 +21,22 @@
   width: 100%;
 }
 
-
-
 .action__download {
   width: 100%;
-
 }
 
 .action__send-to-mail {
   width: 100%;
-
 }
 
 .action__delete {
   width: 100%;
 }
 
-
 .main__card-actions {
   display: flex;
   align-items: center;
 }
-
 
 .action__list {
   display: flex;
@@ -53,15 +45,12 @@
   justify-content: space-between;
 }
 
-
-@media (max-width:620px) {
-
+@media (max-width: 620px) {
   .action__item {
     display: block;
     width: 100%;
   }
 }
-
 
 @media print {
   .main__card-actions {
