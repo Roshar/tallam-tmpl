@@ -15,3 +15,13 @@
   color: var(--white);
   cursor: pointer;
 }
+
+.bold {
+  font-weight: bold;
+}
+
+.good-bg {
+  background-color: #8bb271;
+  color: var(--white);
+  font-size: 18px;
+}

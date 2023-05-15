@@ -1,9 +1,11 @@
+td.t-header {
+  font-weight: 500 !important;
+}
+
 /* Table for marks */
 
 .table-marks {
-
 }
-
 
 .table__responsive {
   overflow-x: auto;
@@ -11,6 +13,7 @@
 
 .table {
   width: 100%;
+  letter-spacing: 0.4px;
 }
 
 .table__information-list {
@@ -32,7 +35,7 @@
 }
 
 .table__tr {
-  transition: all .2s ease-in;
+  transition: all 0.2s ease-in;
 }
 
 .table__th {
@@ -58,8 +61,21 @@
   text-decoration: underline;
 }
 
+/* Common info block */
+
+.main__common-info {
+  margin: 0 auto;
+  max-width: 70%;
+}
+
 @media (max-width: 520px) {
   .table__information-item {
     text-align: center;
+  }
+}
+
+@media print {
+  .print-none {
+    display: none;
   }
 }

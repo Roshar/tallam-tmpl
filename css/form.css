@@ -1,0 +1,37 @@
+/* CARDS*/
+
+.main__card-actions {
+  display: flex;
+  align-items: center;
+}
+
+.action__list {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  justify-content: space-between;
+}
+
+.action__item {
+  display: block;
+  width: 48%;
+}
+
+.action__print {
+  width: 100%;
+}
+.action__download {
+  width: 100%;
+}
+.action__send-to-mail {
+  width: 100%;
+}
+.action__delete {
+  width: 100%;
+}
+
+@media print {
+  .main__card-actions {
+    display: none;
+  }
+}
