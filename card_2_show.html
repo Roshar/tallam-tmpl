@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/main.css" />
-    <title>Личный профиль в проекте "Анализ урока"</title>
+    <title>Результаты оценки - комплексная карта</title>
 </head>
 
 <body>
@@ -281,103 +281,115 @@
                                     {{../resultSecond.level}}</span></td>
                         </tr>
                         <!-- third block -->
-                        <tr>
-                            <td colspan="2" class="own-table-align-center" style="font-weight:bold">3. ПСИХОЛОГО-ПЕДАГОГИЧЕСКИЕ КОМПЕТЕНЦИИ</td>
+                        <tr class="table__tr">
+                            <td class="table__td tac bold" colspan="2">3. ПСИХОЛОГО-ПЕДАГОГИЧЕСКИЕ КОМПЕТЕНЦИИ</td>
                         </tr>
-                        <tr>
-                            <td>3.1. Учитель формирует ценность здоровья и безопасного образа жизни у обучающихся</td>
-                            <td class="fix-width">{{k_3_1}}</td>
+                        <tr class="table__tr">
+                            <td class="table__td">3.1. Учитель формирует ценность здоровья и безопасного образа жизни у
+                                обучающихся</td>
+                            <td class="table__td">{{k_3_1}}</td>
                         </tr>
-                        <tr>
-                           <td>3.2. Учитель организует обучение учащихся на основе дифференциации и индивидуализации с
-                               учетом особенностей их когнитивного и эмоционального развития
-                           </td>
-                           <td class="fix-width">{{k_3_2}}</td>
-                       </tr>
-                        <tr>
-                            <td>3.3. Учитель применяет приемы развития внимания и памяти, мышления и речи, критического мышления и креативности учащихся</td>
-                            <td class="fix-width">{{k_3_2}}</td>
+                        <tr class="table__tr">
+                            <td class="table__td">3.2. Учитель организует обучение учащихся на основе дифференциации и
+                                индивидуализации с
+                                учетом особенностей их когнитивного и эмоционального развития
+                            </td>
+                            <td class="table__td">{{k_3_2}}</td>
+                        </tr>
+                        <tr class="table__tr">
+                            <td class="table__td">3.3. Учитель применяет приемы развития внимания и памяти, мышления и
+                                речи, критического
+                                мышления и креативности учащихся</td>
+                            <td class="table__td">{{k_3_2}}</td>
                         </tr>
 
-                        <tr class=" final-tr  {{../resultThird.levelStyle}}">
-                                <td class="tg-c3ow own-table-align-center" >Результат:<br><span style="font-weight:bold;font-style:italic;font-size:.8em" >100-75% - выше базового,  74-50% - базовый уровень, 49-0% - ниже базового </span></td>
-                                <td class="tg-0pky own-table-align-center align-middle fix-width">{{../thirdInterest}} % <br><span style="font-size:.8em" class="print-none"> {{../resultThird.level}}</span></td>
-                        </tr>
-                        <tr>
-                            <td colspan="2" class="own-table-align-center" style="font-weight:bold"> 4. КОММУНИКАТИВНЫЕ КОМПЕТЕНЦИИ</td>
-
+                        <tr class="table__tr {{../resultThird.levelStyle}}">
+                            <td class="table__td">Результат:<br><span>100-75% - выше базового,
+                                    74-50% - базовый уровень, 49-0% - ниже базового </span></td>
+                            <td class="table__td">{{../thirdInterest}} %
+                                <br><span class="print-none"> {{../resultThird.level}}</span>
+                            </td>
                         </tr>
 
                         <!-- fourth block -->
 
-                        <tr>
-                            <td>4.1. Учитель организует общение и взаимодействие с учащимися на уроке</td>
-                            <td class="fix-width">{{k_4_1}}</td>
+                        <tr class="table__tr">
+                            <td class="table__td tac bold" colspan="2"> 4. КОММУНИКАТИВНЫЕ
+                                КОМПЕТЕНЦИИ</td>
                         </tr>
                         <tr>
-                            <td>4.2. Учитель организует совместную деятельность учащихся в командах (группах)</td>
-                            <td class="fix-width">{{k_4_2}}</td>
+                            <td class="table__td">4.1. Учитель организует общение и взаимодействие с учащимися на уроке
+                            </td>
+                            <td class="table__td">{{k_4_1}}</td>
                         </tr>
                         <tr>
-                            <td>4.3. * Учитель умеет работать с конфликтной ситуацией на уроке</td>
-                            <td class="own-table-align-center">{{ ../specialVal.k_4_3}}</td>
+                            <td class="table__td">4.2. Учитель организует совместную деятельность учащихся в командах
+                                (группах)</td>
+                            <td class="table__td">{{k_4_2}}</td>
+                        </tr>
+                        <tr>
+                            <td class="table__td">4.3. * Учитель умеет работать с конфликтной ситуацией на уроке</td>
+                            <td class="table__td">{{ ../specialVal.k_4_3}}</td>
                         </tr>
                         <tr class=" final-tr  {{../resultFourth.levelStyle}}">
-                                <td class="tg-c3ow own-table-align-center" >Результат:<br><span style="font-weight:bold;font-style:italic;font-size:.8em" >100-75% - выше базового,  74-50% - базовый уровень, 49-0% - ниже базового </span></td>
-                                <td class="tg-0pky own-table-align-center align-middle fix-width">{{../fourthInterest}} % <br> <span style="font-size:.8em" class="print-none"> {{../resultFourth.level}}</span></td>
+                            <td class="table__td tac">Результат:<br><span>100-75% - выше базового,
+                                    74-50% - базовый уровень, 49-0% - ниже базового </span></td>
+                            <td class="table__td tac">{{../fourthInterest}} %
+                                <br> <span class="print-none"> {{../resultFourth.level}}</span>
+                            </td>
                         </tr>
-                        </div>
-                    </tbody>
-                </table>
             </div>
+            </tbody>
+            </table>
+        </div>
 
-            <div class="main__card-actions action">
-                <ul class="action__list list-reset">
-                    <li class="action__item"><button class="action__print btn-outline"
-                            onClick="window.print()">Подготовить для печати</button></li>
-                    <li class="action__item"><button class="action__send-to-mail btn-outline "> Отправить на электронный
-                            адрес учителя</button></li>
-                    <li class="action__item"><button class="action__download btn-outline ">Скачать методические
-                            рекомендации</button> </li>
-                    <li class="action__item"><button class="action__delete btn-outline-danger ">Удалить текущую оценку
-                            (анализ)</button></li>
-                </ul>
-            </div>
+        <div class="main__card-actions action">
+            <ul class="action__list list-reset">
+                <li class="action__item"><button class="action__print btn-outline" onClick="window.print()">Подготовить
+                        для печати</button></li>
+                <li class="action__item"><button class="action__send-to-mail btn-outline "> Отправить на электронный
+                        адрес учителя</button></li>
+                <li class="action__item"><button class="action__download btn-outline ">Скачать методические
+                        рекомендации</button> </li>
+                <li class="action__item"><button class="action__delete btn-outline-danger ">Удалить текущую оценку
+                        (анализ)</button></li>
+            </ul>
+        </div>
 
-            <div class="main__card-form form visually-hidden">
-                <!-- The form for download -->
-                <form class="form__download" method="POST">
-                    <input type="hidden" name="method_rec" value="{{@root.csrf}}" id="excel_tbl">
-                    <input type="hidden" name="_csrf" value="{{@root.csrf}}" id="token">
-                    <button class="form__download-btn" type="submit" id="method_form">Скачать</button>
-                </form>
+        <div class="main__card-form form visually-hidden">
+            <!-- The form for download -->
+            <form class="form__download" method="POST">
+                <input type="hidden" name="method_rec" value="{{@root.csrf}}" id="excel_tbl">
+                <input type="hidden" name="_csrf" value="{{@root.csrf}}" id="token">
+                <button class="form__download-btn" type="submit" id="method_form">Скачать</button>
+            </form>
 
-                <!-- The form of sending result -->
-                <form class="form__send-to-email visually-hidden" method="POST">
-                    <p class="dangel-email">Укажите корректный email адрес</p>
-                    <label for="emai_i" id="email_i" class="visually-hidden">
-                        Адрес электронной почты (email)</label>
-                    <input class="form__send-email" type="email" name="email_i" aria-labelledby="emai_i"
-                        aria-describedby="danger-email" aria-required="true">
-                    <input type="hidden" name="_csrf" value="{{@root.csrf}}" id="token">
-                    <button class="form__download-btn" type="submit" id="method_form">Отправить на электронный адрес
-                        учителя</button>
-                </form>
+            <!-- The form of sending result -->
+            <form class="form__send-to-email visually-hidden" method="POST">
+                <p class="dangel-email">Укажите корректный email адрес</p>
+                <label for="emai_i" id="email_i" class="visually-hidden">
+                    Адрес электронной почты (email)</label>
+                <input class="form__send-email" type="email" name="email_i" aria-labelledby="emai_i"
+                    aria-describedby="danger-email" aria-required="true">
+                <input type="hidden" name="_csrf" value="{{@root.csrf}}" id="token">
+                <button class="form__download-btn" type="submit" id="method_form">Отправить на электронный адрес
+                    учителя</button>
+            </form>
 
-                <button class="btn card-btn" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal2"> <span
-                        style="color:tomato"> Отправить на электронный адрес учителя</span></button>
+            <button class="btn card-btn" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal2"> <span
+                    style="color:tomato"> Отправить на электронный адрес учителя</span></button>
 
-                <!-- The form for delete -->
-                <form class="form__delete" method="POST" action="">
-                    <input type="hidden" name="delete_teacher_school" value="{{school_id}}">
-                    <input type="hidden" name="delete_teacher_id" value="{{teacher_id}}">
-                    <input type="hidden" name="_csrf" value="{{@root.csrf}}" id="token">
-                </form>
-                <button class="form__btn-delete btn" type="button" data-bs-toggle="modal"
-                    data-bs-target="#exampleModal"> <span style="color:tomato"> Удалить текущую оценку
-                        (анализ)</span></button>
+            <!-- The form for delete -->
+            <form class="form__delete" method="POST" action="">
+                <input type="hidden" name="delete_teacher_school" value="{{school_id}}">
+                <input type="hidden" name="delete_teacher_id" value="{{teacher_id}}">
+                <input type="hidden" name="_csrf" value="{{@root.csrf}}" id="token">
+            </form>
+            <button class="form__btn-delete btn" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <span style="color:tomato"> Удалить текущую оценку
+                    (анализ)</span></button>
 
-            </div>
+        </div>
 
 
 
