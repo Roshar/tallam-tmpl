@@ -95,36 +95,56 @@
 
 /* FORM ACTION*/
 
+.form-selection__item {
+  display: flex;
+  width: 100%;
+  row-gap: 10px;
+  column-gap: 10px;
+  padding: 0;
+  /* background-color: #fff;
+  background-image: url();
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 16px 12px;
+  border: 1px solid #ced4da; */
+  /* border-radius: 0.25rem; */
+  /* border: 1px solid #212529; */
+}
+
 .main__form-selection {
   margin: 0 auto;
   max-width: 80%;
   display: flex;
   flex-wrap: wrap;
   column-gap: 10px;
+  row-gap: 10px;
   justify-content: space-between;
 }
-.form-selection {
-}
-.form-selection__block {
-  width: 48%;
-}
+
 .form-selection__discipline {
+  border: 1px solid #ced4da;
 }
-.form-selection__option {
-}
+
 .form-selection__class {
+  width: 49%;
+  border-radius: 5px;
+  border-color: antiquewhite;
 }
 .form-selection__liter {
+  width: 49%;
+  border: none;
 }
 .form-selection__source {
 }
 .form-selection__date {
+  width: 100%;
+  border: none;
+  padding: 0;
 }
-.visually-hidden {
-}
-.form-control {
-}
-.form-selection__theme {
+
+input.form-selection__theme {
+  width: 100%;
+  border: none;
 }
 
 @media (max-width: 620px) {

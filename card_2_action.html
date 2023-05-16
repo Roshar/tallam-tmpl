@@ -41,23 +41,22 @@
             <h1 class="main__title title-2">Оценить урок</h1>
             <h2 class="main__title title-2">ФИО: {{surname}} {{firstname}} {{patronymic}}</h2>
             <form  class="main__form-selection form-selection">
-                <div class="form-selection__block">
-                    <select class="form-selection__item form-selection__discipline"
-                        name="discipline_id" id="discipline">
-                        <!-- {{#if disciplineListByTeacherId}}
-                        {{#each disciplineListByTeacherId}} -->
-                        <!-- <option value="{{discipline_id}}">{{title_discipline}}</option> -->
-                        <!-- {{/each}}
-                        {{else}} -->
-                        <option class="form-selection__option" value="1"> Информатика</option>
-                        <option class="form-selection__option" value="1"> Математика</option>
-                        <!-- <option value="">Нет предмета</option> -->
-                        <!-- {{/if}} -->
-                    </select>
-                </div>
-
-                <div class="form-selection__block">
-                    <select class="form-selection__item form-selection__class" name="class_id"  id="class_id" required >
+                
+                <select class="form-selection__item form-selection__discipline"
+                    name="discipline_id" id="discipline">
+                    <!-- {{#if disciplineListByTeacherId}}
+                    {{#each disciplineListByTeacherId}} -->
+                    <!-- <option value="{{discipline_id}}">{{title_discipline}}</option> -->
+                    <!-- {{/each}}
+                    {{else}} -->
+                    <option class="form-selection__option" value="1"> Информатика</option>
+                    <option class="form-selection__option" value="1"> Математика</option>
+                    <!-- <option value="">Нет предмета</option> -->
+                    <!-- {{/if}} -->
+                </select>
+              
+                <div class="form-selection__item">
+                    <select class="form-selection__class" name="class_id"  id="class_id" required >
                         <option class="form-selection__option" value=""> Выберите класс</option>
                         <option class="form-selection__option" value="1"> 1 класс </option>
                         <option class="form-selection__option" value="2"> 2 класс </option>
@@ -71,10 +70,8 @@
                         <option class="form-selection__option" value="10"> 10 класс </option>
                         <option class="form-selection__option" value="11"> 11 класс </option>
                     </select>
-                </div>
 
-                <div class="form-selection__block">
-                    <select class="form-selection__item form-selection__liter" name="liter_class"  id="liter_class">
+                    <select class="form-selection__liter" name="liter_class"  id="liter_class">
                         <option class="form-selection__option" value=""> Выбрать литер (при наличии) </option>
                         <option class="form-selection__option" value="А"> А </option>
                         <option class="form-selection__option" value="Б"> Б </option>
@@ -84,22 +81,19 @@
                     </select>
                 </div>
                 
-                <div class="form-selection__block">
-                    <select class="form-selection__item form-selection__source" name="source_id"  id="sourse">
+                <div class="form-selection__item">
+                    <select class=" form-selection__source" name="source_id"  id="sourse">
                         <option class="form-selection__option" value="2" id="inside" data-inside="inside"> Внутришкольная оценка</option>
                         <option class="form-selection__option" value="1" id="outside" data-outside="outside"> Внешняя оценка</option>
                     </select> 
-                </div>
-                
-                <div class="form-selection__block">
                     <label class="visually-hidden" for="date_create" id="date_create-label" >Дата и время</label>
-                    <input class="form-selection__item form-selection__input form-selection__date" type="date" id="date_create" placeholder="{{current_date}}"  name="date_create"  min="2019-01-01"
+                    <input class="form-selection__input form-selection__date" type="date" id="date_create" placeholder="{{current_date}}"  name="date_create"  min="2019-01-01"
                     aria-labelledby="date_create" required>
                 </div>
-
-                <div class="form-selection__block"> 
+               
+                <div class="form-selection__item"> 
                     <label class="visually-hidden" for="theme" id="thema-label"> Тема урока: </label>
-                    <input class="form-selection__item form-selection__input form-selection__theme" type="text" name="thema" id="thema" type="text" placeholder="Напишите тему урока" aria-labelledby="thema" required>
+                    <input class="form-selection__input form-selection__theme" type="text" name="thema" id="thema" type="text" placeholder="Напишите тему урока" aria-labelledby="thema" required>
                 </div>
             </form>
 
