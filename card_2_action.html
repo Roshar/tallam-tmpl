@@ -1604,62 +1604,13 @@
                     </div>
                     <input type="submit" class="btn form-selection__btn" value="оценить">
                 </div>
-
             </form>
-
-            <!-- main actions for result (print, download, send, delete) -->
-            <div class="main__card-actions action">
-                <ul class="action__list list-reset">
-                    <li class="action__item"><button class="action__print btn-outline"
-                            onClick="window.print()">Подготовить для печати</button></li>
-                    <li class="action__item"><button class="action__send-to-mail btn-outline "> Отправить на электронный
-                            адрес учителя</button></li>
-                    <li class="action__item"><button class="action__download btn-outline ">Скачать методические
-                            рекомендации</button> </li>
-                    <li class="action__item"><button class="action__delete btn-outline-danger ">Удалить текущую оценку
-                            (анализ)</button></li>
-                </ul>
-            </div>
-
-
-            <!-- hidden form collection -->
-            <div class="main__card-form form visually-hidden">
-
-                <!-- The form for download -->
-                <form class="form__download" method="POST">
-                    <input type="hidden" name="method_rec" value="{{@root.csrf}}" id="excel_tbl">
-                    <input type="hidden" name="_csrf" value="{{@root.csrf}}" id="token">
-                    <button class="form__download-btn" type="submit" id="method_form">Скачать</button>
-                </form>
-
-                <!-- The form of sending result -->
-                <form class="form__send-to-email visually-hidden" method="POST">
-                    <p class="dangel-email">Укажите корректный email адрес</p>
-                    <label for="emai_i" id="email_i" class="visually-hidden">
-                        Адрес электронной почты (email)</label>
-                    <input class="form__send-email" type="email" name="email_i" aria-labelledby="emai_i"
-                        aria-describedby="danger-email" aria-required="true">
-                    <input type="hidden" name="_csrf" value="{{@root.csrf}}" id="token">
-                    <button class="form__download-btn" type="submit" id="method_form"> Отправить на электронный адрес
-                        учителя</button>
-                </form>
-
-                <!-- The form for delete -->
-                <form class="form__delete" method="POST" action="">
-                    <input type="hidden" name="delete_teacher_school" value="{{school_id}}">
-                    <input type="hidden" name="delete_teacher_id" value="{{teacher_id}}">
-                    <input type="hidden" name="_csrf" value="{{@root.csrf}}" id="token">
-                </form>
-                <button class="form__btn-delete btn" type="button" data-bs-toggle="modal"
-                    data-bs-target="#exampleModal"> <span style="color:tomato"> Удалить текущую оценку (анализ)</span>
-                </button>
-            </div>
         </div>
     </main>
 
     <footer class="footer">
         <div class="container">
-            <button id="btn-o" role="button">Модальное окно</button>
+            <button class="visually-hidden" id="btn-trigger"  role="button"> + </button>
             <div class="support">
                 <div class="support__title">
                     <h2>Техническая поддержка</h3>
@@ -1680,87 +1631,19 @@
         </div>
     </footer>
 
-    <!-- <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
-        tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalToggleLabel">Критерии оценивания действий учителя</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body" id="modal-body">
-
-                </div>
-
-
-                <div class="d-grid gap-2">
-                    <button class="btn-main-color" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal"
-                        data-bs-dismiss="modal">Понятно</button>
-                </div>
-            </div>
-        </div>
-    </div> -->
-
-
-
+    <!-- Modal -->
     <div class="modal none">
         <div class="modal__background modal__overlay"></div>
-        <div class="modal__content">
-            <h2 class="modal__title">Восстановление пароля</h2>
-            <div class="modal__description">
+        <div class="modal__content-full">
+            <h2 class="modal__title tac">Критерии оценивания действий учителя</h2>
+            <div class="modal__description" id="modal__description">
 
             </div>
-            <button class="btn modal__btn">Понятно</button>
+            <button class="btn modal__btn" id="close-modal">Понятно</button>
         </div>
     </div>
-
-    <script>
-        // $('[data-toggle="popover"]').popover();
-
-        // let op = $('#hidden-block');
-        // $("#sourse").change(function () {
-        //     if ($(this).find(':selected').attr('id') == "outside") {
-        //         op.removeClass('hidden-block')
-
-        //     } else {
-        //         op.addClass('hidden-block')
-        //     }
-        // });
-
-        const clickAction = document.getElementById('btn-o').addEventListener('click', () => {
-
-        })
-
-        // let collection = document.querySelectorAll('.fa-question-circle');
-
-
-        // for (let i = 0; i < collection.length; i++) {
-        //     collection[i].addEventListener('click', (e) => {
-        //         let infoBlock = e.currentTarget.getElementsByTagName('div')[0].innerHTML
-        //         provideInModal(infoBlock)
-        //     })
-        // }
-
-
-
-        // const provideInModal = function (content) {
-
-        //     // var theDiv = document.getElementById("modal-body");
-        //     var theDiv = document.getElementById("modal__description");
-
-
-        //     theDiv.getElementsByTagName('p')
-
-        //     if (theDiv.children.length) {
-        //         theDiv.innerHTML = ''
-        //     }
-
-        //     theDiv.insertAdjacentHTML("afterBegin", content);
-        //     document.getElementById("btn-o").click()
-
-        // }
-
-    </script>
+    
+    <script src="./js/modal-description.js"></script>
 </body>
 
 </html>

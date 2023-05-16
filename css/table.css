@@ -15,7 +15,8 @@ td.t-header {
 
 /* Table for marks */
 
-.table-marks {}
+.table-marks {
+}
 
 .table__responsive {
   overflow-x: auto;
@@ -61,7 +62,7 @@ td.t-header {
   padding: 14px 10px;
   text-align: left;
   background: var(--link-box-color);
-  color: var(--white)
+  color: var(--white);
 }
 
 .table__th-1 {
@@ -69,7 +70,7 @@ td.t-header {
   padding: 14px 10px;
   text-align: left;
   background: var(--th-bgcolor-1);
-  color: var(--white)
+  color: var(--white);
 }
 
 .table__th-2 {
@@ -77,7 +78,7 @@ td.t-header {
   padding: 14px 10px;
   text-align: left;
   background: var(--th-bgcolor-2);
-  color: var(--white)
+  color: var(--white);
 }
 
 .table__td {
@@ -117,7 +118,7 @@ td.t-header {
   .table__th-1,
   .table__th-2 {
     background-color: none;
-    color: var(--text-color)
+    color: var(--text-color);
   }
 
   @page {
@@ -136,5 +137,4 @@ td.t-header {
     clip: none;
     overflow: visible;
   }
-
 }
