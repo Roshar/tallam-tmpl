@@ -48,12 +48,36 @@ td.t-header {
   transition: all 0.2s ease-in;
 }
 
-.table__th {
+/* .table__th {
   border: 1px solid #dad6d6;
   border-bottom: 1px solid var(--borderColor);
   padding: 14px 10px;
   text-align: left;
   color: var(--accent);
+} */
+
+.table__th {
+  border: 1px solid #dad6d6;
+  padding: 14px 10px;
+  text-align: left;
+  background: var(--link-box-color);
+  color: var(--white)
+}
+
+.table__th-1 {
+  border: 1px solid #dad6d6;
+  padding: 14px 10px;
+  text-align: left;
+  background: var(--th-bgcolor-1);
+  color: var(--white)
+}
+
+.table__th-2 {
+  border: 1px solid #dad6d6;
+  padding: 14px 10px;
+  text-align: left;
+  background: var(--th-bgcolor-2);
+  color: var(--white)
 }
 
 .table__td {
@@ -87,6 +111,13 @@ td.t-header {
 @media print {
   .print-none {
     display: none;
+  }
+
+  .table__th,
+  .table__th-1,
+  .table__th-2 {
+    background-color: none;
+    color: var(--text-color)
   }
 
   @page {

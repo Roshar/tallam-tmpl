@@ -9,6 +9,8 @@
 :root {
   --darkblue: #2e609a;
   --linkblue: #487bb7;
+  /* для подразделов в таблице */
+  --lighteblue: #5a89bf;
   --linkblue-hover: #6194d0;
   --lightblue: #c7d9ed;
   --black: #484343;
@@ -16,13 +18,17 @@
   --borderColor: #52a1ff;
   --darkgrey: #484343;
   --pureblue: #79a2d3;
+
   --lightgreen: #8bb271;
+
   --green: #67a030;
   --red: tomato;
 
   --accent: var(--darkblue);
   --link-box-color: var(--linkblue);
   --link-box-color-hover: var(--linkblue-hover);
+  --th-bgcolor-1: var(--lightblue);
+  --th-bgcolor-2: var(--lighteblue);
   --page-bg-light: var(--lightblue);
   --text-color: var(--black);
   --link-hover: var(--pureblue);
@@ -501,7 +507,7 @@ input:focus {
   opacity: 0.2;
 }
 
-.copyright p + p {
+.copyright p+p {
   margin-top: 0.5em;
 }
 
@@ -663,6 +669,7 @@ input:focus {
 }
 
 @media print {
+
   .footer,
   .header__top-nav,
   .section-nav {
