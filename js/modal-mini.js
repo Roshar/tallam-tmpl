@@ -1,7 +1,32 @@
-document.querySelector('.modal-status-on').addEventListener('click', toggleWindow);
-document.getElementById('btn-close').addEventListener('click', toggleWindow);
-document.addEventListener('keydown', () => document.getElementById('modal').classList.add('none'))
-function toggleWindow() {
-    const modal = document.getElementById('modal')
-    modal.classList.toggle('none');
+const collectionBtn = document.querySelectorAll(".modal-status");
+
+for (let i = 0; i < collectionBtn.length; i++) {
+  collectionBtn[i].addEventListener("click", toggleWindow);
+}
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    const modalList = document.querySelectorAll(".modal");
+    for (let i = 0; i < modalList.length; i++) {
+      modalList[i].classList.add("none");
+    }
+  }
+});
+
+function toggleWindow(e) {
+  const action = e.currentTarget.dataset.action;
+  if (action === "send") {
+    document.getElementById("modal-send").classList.toggle("none");
+  } else if (action === "delete") {
+    document.getElementById("modal-delete").classList.toggle("none");
+  } else if (action === "confirm_sending") {
+    console.log("sending");
+  } else if (action === "confirm_deletion") {
+    console.log("deletion");
+  } else {
+    const modalList = document.querySelectorAll(".modal");
+    for (let i = 0; i < modalList.length; i++) {
+      modalList[i].classList.add("none");
+    }
+  }
 }

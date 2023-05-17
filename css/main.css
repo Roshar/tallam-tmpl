@@ -86,6 +86,7 @@ body {
   font-weight: 500;
   transition: opacity 0.2s ease-in;
   border: none;
+  cursor: pointer;
 }
 
 .btn-outline,
@@ -97,6 +98,26 @@ body {
   height: 60px;
   border: 1px solid #000;
   transition: all 0.2s ease-in;
+  cursor: pointer;
+}
+
+.btn-cancel {
+  display: inline-block;
+  height: 48px;
+  padding: 12px 28px;
+  border-radius: 5px;
+  color: var(--danger);
+  letter-spacing: 0.15px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: opacity 0.2s ease-in;
+  border: none;
+  cursor: pointer;
+  border: 1px solid var(--danger);
+}
+
+.btn-delete {
+  background-color: var(--danger);
 }
 
 .btn-outline-danger {
@@ -119,6 +140,12 @@ body {
   cursor: pointer;
 }
 
+.btn-cancel:hover {
+  border: 1px solid var(--danger);
+  cursor: pointer;
+  opacity: 0.7;
+}
+
 .btn:active {
   position: relative;
   top: 1px;
@@ -126,7 +153,7 @@ body {
 
 .accordion {
   background-color: #c7d9ed;
-  color: #2E609A;
+  color: #2e609a;
   cursor: pointer;
   padding: 18px;
   width: 100%;
@@ -149,7 +176,6 @@ body {
   overflow: hidden;
   transition: max-height 0.2s ease-out;
 }
-
 
 .none {
   display: none;
@@ -435,12 +461,9 @@ body {
   border-radius: 5px;
   background-color: var(--white);
 
-
-
   /* position: absolute;
   top: 40%;
   left: 50%; */
-
 
   /* -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
@@ -550,7 +573,7 @@ input:focus {
   opacity: 0.2;
 }
 
-.footer__copyright p+p {
+.footer__copyright p + p {
   margin-top: 0.5em;
 }
 
@@ -576,7 +599,6 @@ input:focus {
   .main--auth {
     padding-top: 80px;
     background-image: none;
-
   }
 
   .top-nav {
@@ -701,9 +723,6 @@ input:focus {
     flex-wrap: wrap;
   }
 
-
-
-
   .auth__btn-enter {
     width: 100%;
   }
@@ -730,7 +749,6 @@ input:focus {
 }
 
 @media print {
-
   .footer,
   .header__top-nav,
   .section-nav {

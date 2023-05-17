@@ -235,11 +235,11 @@
                 <ul class="action__list list-reset">
                     <li class="action__item"><button class="action__print btn-outline"
                             onClick="window.print()">Подготовить для печати</button></li>
-                    <li class="action__item"><button class="action__send-to-mail btn-outline "> Отправить на электронный
+                    <li class="action__item"><button class="action__send-to-mail btn-outline modal-status" data-action="send"> Отправить на электронный
                             адрес учителя</button></li>
                     <li class="action__item"><button class="action__download btn-outline ">Скачать методические
                             рекомендации</button> </li>
-                    <li class="action__item"><button class="action__delete btn-outline-danger ">Удалить текущую оценку
+                    <li class="action__item"><button class="action__delete btn-outline-danger modal-status" data-action="delete">Удалить текущую оценку
                             (анализ)</button></li>
                 </ul>
             </div>
@@ -278,10 +278,6 @@
                         (анализ)</span></button>
 
             </div>
-
-
-
-
         </div>
     </main>
     <footer class="footer">
@@ -306,6 +302,35 @@
             </div>
         </div>
     </footer>
+    
+    <!-- MODAL FOR SEND RESULT -->
+    <div class="modal none" id="modal-send">
+        <div class="modal__background modal__overlay"></div>
+        <div class="modal__content">
+          <h2 class="modal__title tac">Отправить рекомендации</h2>
+          <form class="modal__form">
+              <label class="modal__label" for="email_address" id="email_l">Адрес электронной почты: Иванова иван</label>
+              <input class="modal__input" type="text" name="email_address"  id="email_i">
+          </form>
+          <div class="modal__actions">
+            <button class="btn modal__btn-half modal-status" data-action="confirm_sending">Отправить</button>
+            <button class="btn-cancel modal__btn-half modal-status" data-action="close">Отменить</button>
+          </div>
+        </div>
+      </div>
+
+    <!-- MODAL FOR DELETE-->
+      <div class="modal none" id="modal-delete">
+        <div class="modal__background modal__overlay"></div>
+        <div class="modal__content">
+          <h2 class="modal__title tac">Вы уверены?</h2>
+          <div class="modal__actions">
+            <button class="btn btn-delete modal__btn-half modal-status" data-action="confirm_deletion">Да, удалить</button>
+            <button class="btn-cancel modal__btn-half modal-status" data-action="close">Нет</button>
+          </div>
+        </div>
+      </div>
+    <script src="./js/modal-mini.js"></script>
 </body>
 
 </html>
