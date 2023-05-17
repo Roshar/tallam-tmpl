@@ -1,112 +1,87 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/main.css" />
-    <title>Авторизация</title>
-  </head>
-  <body>
-    <header class="header header--auth">
-      <div class="container">
-          <nav class="header__top-nav top-nav" aria-label="Основные разделы на странице">
-            <a href="" class="logo header__logo">
-              <p class="logo__title logo--large"><span class="logo__underline">Tallam</span> </p>
-              <p class="logo__desc">Информационно-аналитическая <br />платформа</p>
-            </a>
-         </nav>
-      </div>
-    </header>
-    <main class="main main--auth">
-      <div class="main__form-wrapper auth">
-        <h2 class="auth__title">Войти в <strong>Tallam</strong></h2>
-        <form action="/auth/login" class="auth__form" method="POST">
-          <!-- Утилитарные классы -->
-          <p class="txt-danger" id="danger-login">Некорректный логин</p> 
-          <label for="login_i" id="login_l" class="visually-hidden">
-            Логин (email)</label
-          >
-          <input
-            id="login_i"
-            type="email"
-            class="auth__input"
-            placeholder="ЛОГИН"
-            name="email"
-            aria-labelledby="login_i"
-            aria-describedby="danger-login"
-            aria-required="true"
-            required
-          />
 
-          <p class="txt-danger" id="danger-password">Неверный пароль</p>
-          <label for="password_i" id="password_l" class="visually-hidden">
-            Пароль</label
-          >
-          <input
-            id="password"
-            type="password"
-            class="auth__input"
-            placeholder="ПАРОЛЬ"
-            name="password"
-            aria-labelledby="password_i"
-            aria-describedby="danger-password"
-            aria-required="true"
-            required
-          />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/main.css" />
+  <title>Авторизация</title>
+</head>
 
-          <input
-            type="hidden"
-            name="_csrf"
-            value="9H2KxKRe-Q3ad3P0t9e6NzO82-QYTkoS9h0U"
-            id="token"
-          />
+<body>
+  <header class="header header--auth">
+    <div class="container">
+      <nav class="header__top-nav top-nav" aria-label="Основные разделы на странице">
+        <a href="" class="logo header__logo">
+          <p class="logo__title logo--large"><span class="logo__underline">Tallam</span> </p>
+          <p class="logo__desc">Информационно-аналитическая <br />платформа</p>
+        </a>
+      </nav>
+    </div>
+  </header>
+  <main class="main main--auth">
+    <div class="main__form-wrapper auth">
+      <h2 class="auth__title">Войти в <strong>Tallam</strong></h2>
+      <form action="/auth/login" class="auth__form" method="POST">
+        <!-- Утилитарные классы -->
+        <p class="txt-danger" id="danger-login">Некорректный логин</p>
+        <label for="login_i" id="login_l" class="visually-hidden">
+          Логин (email)</label>
+        <input id="login_i" type="email" class="auth__input" placeholder="ЛОГИН" name="email" aria-labelledby="login_i"
+          aria-describedby="danger-login" aria-required="true" required />
 
-          <div class="auth__actions">
-            <button type="button" class="btn auth__btn-enter">ВОЙТИ</button>
-            <a href="#!" role="button" class="auth__link-forgot link"> Забыли пароль? </a>
-          </div>
-        </form>
-      </div>
-    </main>
-    <footer class="footer">
-      <div class="container">
-        <div class="support">
-          <div class="support__title">
-            <h2 class="support__title">Техническая поддержка</h3>
+        <p class="txt-danger" id="danger-password">Неверный пароль</p>
+        <label for="password_i" id="password_l" class="visually-hidden">
+          Пароль</label>
+        <input id="password" type="password" class="auth__input" placeholder="ПАРОЛЬ" name="password"
+          aria-labelledby="password_i" aria-describedby="danger-password" aria-required="true" required />
+
+        <input type="hidden" name="_csrf" value="9H2KxKRe-Q3ad3P0t9e6NzO82-QYTkoS9h0U" id="token" />
+
+        <div class="auth__actions">
+          <button type="button" class="btn auth__btn-enter">ВОЙТИ</button>
+          <a href="#!" role="button" class="auth__link-forgot link modal-status-on"> Забыли пароль? </a>
+        </div>
+      </form>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__support support">
+        <div class="support__title">
+          <h2>Техническая поддержка</h3>
             <ul class="support__list list-reset">
               <li class="support__item">
-                Эл. почта:<a href="mailto:webrush@mail.ru"> webrush@mail.ru</a>
+                Эл. почта:<a class="support__email-link" href="mailto:webrush@mail.ru">
+                  webrush@mail.ru</a>
               </li>
               <li class="support__item">
-                Телеграмм чат:<a
-                  href="https://t.me/nakata_katsu"
-                  class="auth-link"
-                >
-                  Написать</a
-                >
+                Телеграмм чат:<a class="support__telegram-link" href="https://t.me/nakata_katsu">
+                  Написать</a>
               </li>
             </ul>
-          </div>
-          <div class="copyright">
-            <p>©2020-2023, Tallam - Информационно-аналитическая платформа</p>
-          </div>
+        </div>
+        <div class="footer__copyright">
+          <p>©2020-2023, Tallam - Информационно-аналитическая платформа</p>
         </div>
       </div>
-    </footer>
-    
-    <div class="modal none">
-      <div class="modal__background modal__overlay"></div>
-      <div class="modal__content">
-        <h2 class="modal__title">Восстановление пароля</h2>
-        <p class="modal__description">
-          Уважаемый пользователь! Если вы забыли пароль к своей учетной записи или столкнулись с другими проблемами, пожалуйста, свяжитесь с нами в 
-         <strong><a href="https://t.me/nakata_katsu" class="modal__link link">ТЕЛЕГРАММ</a></strong>.
-        </p>
-        <button class="btn modal__btn">Понятно</button>
-        <!-- <div class="modal__action-buttons modal__action-buttons--stacked">
-          <button class="btn modal__btn">Понятно</button>
-        </div> -->
-      </div>
     </div>
-  </body>
+  </footer>
+
+  <div class="modal none" id="modal">
+    <div class="modal__background modal__overlay"></div>
+    <div class="modal__content">
+      <h2 class="modal__title tac">Восстановление пароля</h2>
+      <p class="modal__description tac">
+        Уважаемый пользователь! Если вы забыли пароль к своей учетной записи или столкнулись с другими проблемами,
+        пожалуйста, свяжитесь с нами в
+        <strong><a href="https://t.me/nakata_katsu" class="modal__link link">ТЕЛЕГРАММ</a></strong>.
+      </p>
+      <button class="btn modal__btn" id="btn-close">Понятно</button>
+
+    </div>
+  </div>
+  <script src="./js/modal-mini.js"></script>
+</body>
+
 </html>

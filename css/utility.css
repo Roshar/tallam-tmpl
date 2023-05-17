@@ -29,3 +29,7 @@
 .prompt {
   display: none;
 }
+
+.brand_link_color {
+  color: var(--link-box-color)
+}

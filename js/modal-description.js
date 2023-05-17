@@ -1,3 +1,5 @@
+// Modal for tip 
+
 const modalClassValue = document.querySelector(".modal");
 
 const triggerBtn = document.getElementById("btn-trigger");
