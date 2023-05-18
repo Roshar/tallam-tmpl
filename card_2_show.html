@@ -77,9 +77,9 @@
                             <th class="table__th">Оценивание в баллах</th>
                         </tr>
                     </thead>
-
                     <tbody>
-                        <!-- block for print --start -->
+
+                        <!-- block for print -->
                         <tr class="table__tr print-show visually-hidden">
                             <td class="table__td">Критерии оценки урока (2 балла – признак проявляется в полной мере, но
                                 не регулярно, 1 балл – признак проявляется не в полной мере, 0 баллов – признак не
@@ -88,7 +88,6 @@
                                 позволяет учителю организовать такую работу на уроке</th>
                             <td class="table__td">Оценивание в баллах</th>
                         </tr>
-                        <!-- block for print --end -->
 
                         <!-- first block -->
                         <tr class="table__tr">
@@ -140,9 +139,7 @@
                             </td>
                         </tr>
 
-
                         <!-- second block-->
-
                         <tr class="table__tr">
                             <td colspan="2" class="table__td tac bold">2. МЕТОДИЧЕСКИЕ КОМПЕТЕНЦИИ
                             </td>
@@ -280,6 +277,7 @@
                             <td class="table__td tac">{{../secondInterest}} % <br><span class="print-none">
                                     {{../resultSecond.level}}</span></td>
                         </tr>
+
                         <!-- third block -->
                         <tr class="table__tr">
                             <td class="table__td tac bold" colspan="2">3. ПСИХОЛОГО-ПЕДАГОГИЧЕСКИЕ КОМПЕТЕНЦИИ</td>
@@ -312,7 +310,6 @@
                         </tr>
 
                         <!-- fourth block -->
-
                         <tr class="table__tr">
                             <td class="table__td tac bold" colspan="2"> 4. КОММУНИКАТИВНЫЕ
                                 КОМПЕТЕНЦИИ</td>
@@ -348,17 +345,20 @@
             <ul class="action__list list-reset">
                 <li class="action__item"><button class="action__print btn-outline" onClick="window.print()">Подготовить
                         для печати</button></li>
-                <li class="action__item"><button class="action__send-to-mail btn-outline "> Отправить на электронный
+                <li class="action__item"><button class="action__send-to-mail btn-outline modal-status"
+                        data-action="send"> Отправить на электронный
                         адрес учителя</button></li>
                 <li class="action__item"><button class="action__download btn-outline ">Скачать методические
                         рекомендации</button> </li>
-                <li class="action__item"><button class="action__delete btn-outline-danger ">Удалить текущую оценку
+                <li class="action__item"><button class="action__delete btn-outline-danger modal-status"
+                        data-action="delete">Удалить текущую оценку
                         (анализ)</button></li>
             </ul>
         </div>
 
         <!-- hidden form collection -->
         <div class="main__card-form form visually-hidden">
+
             <!-- The form for download -->
             <form class="form__download" method="POST">
                 <input type="hidden" name="method_rec" value="{{@root.csrf}}" id="excel_tbl">
@@ -387,9 +387,8 @@
                 <input type="hidden" name="delete_teacher_id" value="{{teacher_id}}">
                 <input type="hidden" name="_csrf" value="{{@root.csrf}}" id="token">
             </form>
-            <button class="form__btn-delete btn" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                <span style="color:tomato"> Удалить текущую оценку
-                    (анализ)</span></button>
+            <button class="form__btn-delete btn" type="button"> Удалить текущую оценку
+                (анализ)</span></button>
         </div>
 
         </div>
@@ -416,6 +415,37 @@
             </div>
         </div>
     </footer>
+
+    <!-- MODAL FOR SEND RESULT -->
+    <div class="modal none" id="modal-send">
+        <div class="modal__background modal__overlay"></div>
+        <div class="modal__content">
+            <h2 class="modal__title tac">Отправить рекомендации</h2>
+            <form class="modal__form">
+                <label class="modal__label" for="email_address" id="email_l">Адрес электронной почты: Иванова
+                    иван</label>
+                <input class="modal__input" type="text" name="email_address" id="email_i">
+            </form>
+            <div class="modal__actions">
+                <button class="btn modal__btn-half modal-status" data-action="confirm_sending">Отправить</button>
+                <button class="btn-cancel modal__btn-half modal-status">Отменить</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL FOR DELETE-->
+    <div class="modal none" id="modal-delete">
+        <div class="modal__background modal__overlay"></div>
+        <div class="modal__content">
+            <h2 class="modal__title tac">Вы уверены?</h2>
+            <div class="modal__actions">
+                <button class="btn btn-delete modal__btn-half modal-status" data-action="confirm_deletion">Да,
+                    удалить</button>
+                <button class="btn-cancel modal__btn-half modal-status">Нет</button>
+            </div>
+        </div>
+    </div>
+    <script src="./js/modal-mini.js"></script>
 </body>
 
 </html>

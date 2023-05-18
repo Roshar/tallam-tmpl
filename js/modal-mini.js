@@ -23,7 +23,10 @@ function toggleWindow(e) {
     console.log("sending");
   } else if (action === "confirm_deletion") {
     console.log("deletion");
-  } else {
+  } else if (action === "forgot_password") {
+    document.getElementById("modal-forgot").classList.toggle("none");
+  }
+  else {
     const modalList = document.querySelectorAll(".modal");
     for (let i = 0; i < modalList.length; i++) {
       modalList[i].classList.add("none");

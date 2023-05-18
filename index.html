@@ -23,6 +23,7 @@
     <div class="main__form-wrapper auth">
       <h2 class="auth__title">Войти в <strong>Tallam</strong></h2>
       <form action="/auth/login" class="auth__form" method="POST">
+
         <!-- Утилитарные классы -->
         <p class="txt-danger" id="danger-login">Некорректный логин</p>
         <label for="login_i" id="login_l" class="visually-hidden">
@@ -40,7 +41,8 @@
 
         <div class="auth__actions">
           <button type="button" class="btn auth__btn-enter">ВОЙТИ</button>
-          <a href="#!" role="button" class="auth__link-forgot link modal-status-on"> Забыли пароль? </a>
+          <a href="#!" role="button" class="auth__link-forgot link modal-status" data-action="forgot_password"> Забыли
+            пароль? </a>
         </div>
       </form>
     </div>
@@ -68,7 +70,7 @@
     </div>
   </footer>
 
-  <div class="modal none" id="modal">
+  <div class="modal none" id="modal-forgot">
     <div class="modal__background modal__overlay"></div>
     <div class="modal__content">
       <h2 class="modal__title tac">Восстановление пароля </h2>
@@ -77,7 +79,7 @@
         пожалуйста, свяжитесь с нами в
         <strong><a href="https://t.me/nakata_katsu" class="modal__link link">ТЕЛЕГРАММ</a></strong>.
       </p>
-      <button class="btn modal__btn" id="btn-close">Понятно</button>
+      <button class="btn modal__btn modal-status">Понятно</button>
     </div>
   </div>
   <script src="./js/modal-mini.js"></script>

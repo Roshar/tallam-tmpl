@@ -37,7 +37,6 @@
     </section>
     <main class="main">
         <div class="container">
-
             <h1 class="main__title title-2">Личный профиль </h1>
             <h2 class="main__title title-2">ФИО: АХМЕДОВ АХМЕД АХМЕДОВИЧ </h2>
             <div class="main__common-info table">
@@ -77,7 +76,6 @@
                             <th class="table__th">Оценивание в баллах</th>
                         </tr>
                     </thead>
-
                     <tbody>
                         <tr class="table__tr print-show visually-hidden">
                             <td class="table__td">Критерии оценки урока (2 балла – признак проявляется в полной мере, но
@@ -87,8 +85,8 @@
                                 позволяет учителю организовать такую работу на уроке</th>
                             <td class="table__td">Оценивание в баллах</th>
                         </tr>
-                        <!-- second block-->
 
+                        <!-- second block-->
                         <tr class="table__tr">
                             <td colspan="2" class="table__td tac bold">2. МЕТОДИЧЕСКИЕ КОМПЕТЕНЦИИ
                             </td>
@@ -231,20 +229,24 @@
                 </table>
             </div>
 
+            <!-- main actions for result (print, download, send, delete) -->
             <div class="main__card-actions action">
                 <ul class="action__list list-reset">
                     <li class="action__item"><button class="action__print btn-outline"
                             onClick="window.print()">Подготовить для печати</button></li>
-                    <li class="action__item"><button class="action__send-to-mail btn-outline modal-status" data-action="send"> Отправить на электронный
+                    <li class="action__item"><button class="action__send-to-mail btn-outline modal-status"
+                            data-action="send"> Отправить на электронный
                             адрес учителя</button></li>
                     <li class="action__item"><button class="action__download btn-outline ">Скачать методические
                             рекомендации</button> </li>
-                    <li class="action__item"><button class="action__delete btn-outline-danger modal-status" data-action="delete">Удалить текущую оценку
+                    <li class="action__item"><button class="action__delete btn-outline-danger modal-status"
+                            data-action="delete">Удалить текущую оценку
                             (анализ)</button></li>
                 </ul>
             </div>
 
             <div class="main__card-form form visually-hidden">
+
                 <!-- The form for download -->
                 <form class="form__download" method="POST">
                     <input type="hidden" name="method_rec" value="{{@root.csrf}}" id="excel_tbl">
@@ -273,9 +275,9 @@
                     <input type="hidden" name="delete_teacher_id" value="{{teacher_id}}">
                     <input type="hidden" name="_csrf" value="{{@root.csrf}}" id="token">
                 </form>
-                <button class="form__btn-delete btn" type="button" data-bs-toggle="modal"
-                    data-bs-target="#exampleModal"> <span style="color:tomato"> Удалить текущую оценку
-                        (анализ)</span></button>
+                <button class="form__btn-delete btn" type="button">
+                    Удалить текущую оценку
+                    (анализ)</span></button>
 
             </div>
         </div>
@@ -302,34 +304,36 @@
             </div>
         </div>
     </footer>
-    
+
     <!-- MODAL FOR SEND RESULT -->
     <div class="modal none" id="modal-send">
         <div class="modal__background modal__overlay"></div>
         <div class="modal__content">
-          <h2 class="modal__title tac">Отправить рекомендации</h2>
-          <form class="modal__form">
-              <label class="modal__label" for="email_address" id="email_l">Адрес электронной почты: Иванова иван</label>
-              <input class="modal__input" type="text" name="email_address"  id="email_i">
-          </form>
-          <div class="modal__actions">
-            <button class="btn modal__btn-half modal-status" data-action="confirm_sending">Отправить</button>
-            <button class="btn-cancel modal__btn-half modal-status" data-action="close">Отменить</button>
-          </div>
+            <h2 class="modal__title tac">Отправить рекомендации</h2>
+            <form class="modal__form">
+                <label class="modal__label" for="email_address" id="email_l">Адрес электронной почты: Иванова
+                    иван</label>
+                <input class="modal__input" type="text" name="email_address" id="email_i">
+            </form>
+            <div class="modal__actions">
+                <button class="btn modal__btn-half modal-status" data-action="confirm_sending">Отправить</button>
+                <button class="btn-cancel modal__btn-half modal-status">Отменить</button>
+            </div>
         </div>
-      </div>
+    </div>
 
     <!-- MODAL FOR DELETE-->
-      <div class="modal none" id="modal-delete">
+    <div class="modal none" id="modal-delete">
         <div class="modal__background modal__overlay"></div>
         <div class="modal__content">
-          <h2 class="modal__title tac">Вы уверены?</h2>
-          <div class="modal__actions">
-            <button class="btn btn-delete modal__btn-half modal-status" data-action="confirm_deletion">Да, удалить</button>
-            <button class="btn-cancel modal__btn-half modal-status" data-action="close">Нет</button>
-          </div>
+            <h2 class="modal__title tac">Вы уверены?</h2>
+            <div class="modal__actions">
+                <button class="btn btn-delete modal__btn-half modal-status" data-action="confirm_deletion">Да,
+                    удалить</button>
+                <button class="btn-cancel modal__btn-half modal-status">Нет</button>
+            </div>
         </div>
-      </div>
+    </div>
     <script src="./js/modal-mini.js"></script>
 </body>
 
