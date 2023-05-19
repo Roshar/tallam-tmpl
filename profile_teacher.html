@@ -39,16 +39,18 @@
 
     <main class="main">
         <div class="wrapper-profile">
-            <h1 class="main__title title-2"> Личный профиль</h1>
+            <h1 class="main__title title-profile"> Личный профиль</h1>
             <div class="main__teacher-profile teacher-profile">
                 <div class="teacher-profile__photo">
-                    <img class="teacher-profile__img" src="./img/icons/woman.png" alt="photo">
-                    <button class="teacher-profile__upload btn-upload"> <img src="./img/icons/upload-dark.svg" alt="">
-                        Загрузить </button>
+                    <img class="teacher-profile__img" src="./img/icons/woman2.png" alt="photo">
+                    <!-- <button class="teacher-profile__upload btn-upload"> <img src="./img/icons/upload-dark.svg" alt="">
+                        <span class="hidden-mobile">Загрузить</span> </button> -->
                 </div>
-                <div class="teacher-profile__information-block block-info">
 
+                <div class="teacher-profile__information-block block-info">
+                    <a class="block-info__edit" href="/" role="link">Редактировать</a>
                     <h3 class="block-info__title"> Личные данные</h3>
+
                     <dl class="block-info__header">
                         <dt class="block-info__key">ФИО</dt>
                         <dd class="block-info__val">{{surname}} {{firstname}} {{patronymic}}</dd>
@@ -57,6 +59,7 @@
                         <dt class="block-info__key">СНИЛС</dt>
                         <dd class="block-info__val">{{snils}}</dd>
                     </dl>
+
                     <h3 class="block-info__title"> Образование</h3>
                     <dl class="block-info__header">
                         <dt class="block-info__key">Образование</dt>
@@ -64,6 +67,7 @@
                         <dt class="block-info__key">Номер документа</dt>
                         <dd class="block-info__val">{{../birthdayShort}}</dd>
                     </dl>
+
                     <h3 class="block-info__title"> Профессиональные данные</h3>
                     <dl class="block-info__header">
                         <dt class="block-info__key">Должность</dt>
@@ -82,14 +86,35 @@
                         <dd class="block-info__val">{{../birthdayShort}}</dd>
                     </dl>
 
-
+                    <div class="block-info__delete">
+                        <!-- MODAL FOR DELETE-->
+                        <div class="modal none" id="modal-delete">
+                            <div class="modal__background modal__overlay"></div>
+                            <div class="modal__content">
+                                <h2 class="modal__title tac">Вы уверены?</h2>
+                                <p class="modal__description tac">
+                                    <strong>Важно!</strong> При удалении личного профиля пользователя будут удалены все
+                                    данные
+                                    сохранения, связанные с этим профилем.
+                                </p>
+                                <div class="modal__actions">
+                                    <button class="btn btn-delete modal__btn-half modal-status"
+                                        data-action="confirm_deletion">Да,
+                                        удалить</button>
+                                    <button class="btn-cancel modal__btn-half modal-status">Нет</button>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="block-info__delete-btn btn btn-delete modal-status" data-action="delete">Удалить
+                            пользователя</button>
+                    </div>
                 </div>
             </div>
 
         </div>
     </main>
 
-    <footer class="footer">
+    <footer class=" footer">
         <div class="container">
             <div class="footer__support support">
                 <div class="support__title">
@@ -111,6 +136,7 @@
             </div>
         </div>
     </footer>
+    <script src="./js/modal-mini.js"></script>
 </body>
 
 </html>

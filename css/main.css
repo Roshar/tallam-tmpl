@@ -19,7 +19,8 @@
   --borderColor: #52a1ff;
   --darkgrey: #484343;
   --pureblue: #79a2d3;
-
+  --blueviolet: #626D79;
+  --blueviolet2: #626d79;
   --lightgreen: #8bb271;
 
   --green: #67a030;
@@ -36,6 +37,8 @@
   --good: var(--lightgreen);
   --success: var(--green);
   --danger: var(--red);
+  --profile-subtitle: var(--blueviolet);
+  --profile-text_subhead: var(--blueviolet2);
 }
 
 html,
@@ -71,6 +74,13 @@ body {
 .title-2 {
   margin-bottom: 20px;
   color: var(--darkgrey);
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.title-profile {
+  margin-bottom: 20px;
+  color: var(--link-box-color);
   font-size: 24px;
   font-weight: 500;
 }
@@ -574,7 +584,7 @@ input:focus {
   opacity: 0.2;
 }
 
-.footer__copyright p + p {
+.footer__copyright p+p {
   margin-top: 0.5em;
 }
 
@@ -750,6 +760,7 @@ input:focus {
 }
 
 @media print {
+
   .footer,
   .header__top-nav,
   .section-nav {
