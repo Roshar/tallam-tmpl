@@ -26,7 +26,7 @@
     </header>
 
     <section class="section-nav">
-        <div class="container">
+        <div class="wrapper-profile">
             <nav class="section-nav__second-nav second-nav">
                 <ul class="second-nav__list list-reset">
                     <li class="second-nav__item"> <a href="/school/card/check/project/2/teacher/{{teacher_id}}"
@@ -38,9 +38,8 @@
     </section>
 
     <main class="main">
-        <div class="container">
-            <h1 class="visually-hidden"> Личный профиль</h1>
-            <h2 class="main__title title-2">Личный профиль </h2>
+        <div class="wrapper-profile">
+            <h1 class="main__title title-2"> Личный профиль</h1>
             <div class="main__teacher-profile teacher-profile">
                 <div class="teacher-profile__photo">
                     <img class="teacher-profile__img" src="./img/icons/woman.png" alt="photo">
@@ -49,20 +48,38 @@
                 </div>
                 <div class="teacher-profile__information-block block-info">
 
-                    <h2 class="block-info__title title-2"> Личные данные</h2>
+                    <h3 class="block-info__title"> Личные данные</h3>
                     <dl class="block-info__header">
                         <dt class="block-info__key">ФИО</dt>
                         <dd class="block-info__val">{{surname}} {{firstname}} {{patronymic}}</dd>
-                    </dl>
-
-                    <dl class="block-info__header">
                         <dt class="block-info__key">Дата рождения</dt>
+                        <dd class="block-info__val">{{../birthdayShort}}</dd>
+                        <dt class="block-info__key">СНИЛС</dt>
+                        <dd class="block-info__val">{{snils}}</dd>
+                    </dl>
+                    <h3 class="block-info__title"> Образование</h3>
+                    <dl class="block-info__header">
+                        <dt class="block-info__key">Образование</dt>
+                        <dd class="block-info__val">{{surname}} {{firstname}} {{patronymic}}</dd>
+                        <dt class="block-info__key">Номер документа</dt>
+                        <dd class="block-info__val">{{../birthdayShort}}</dd>
+                    </dl>
+                    <h3 class="block-info__title"> Профессиональные данные</h3>
+                    <dl class="block-info__header">
+                        <dt class="block-info__key">Должность</dt>
+                        <dd class="block-info__val">{{surname}} {{firstname}} {{patronymic}}</dd>
+                        <dt class="block-info__key">Категория</dt>
+                        <dd class="block-info__val">{{../birthdayShort}}</dd>
+                        <dt class="block-info__key">Преподваемые дисциплины:</dt>
                         <dd class="block-info__val">{{../birthdayShort}}</dd>
                     </dl>
 
+                    <h3 class="block-info__title"> Контактные данные</h3>
                     <dl class="block-info__header">
-                        <dt class="block-info__key">СНИЛС</dt>
-                        <dd class="block-info__val">{{snils}}</dd>
+                        <dt class="block-info__key">Email</dt>
+                        <dd class="block-info__val">{{surname}} {{firstname}} {{patronymic}}</dd>
+                        <dt class="block-info__key">Телефон</dt>
+                        <dd class="block-info__val">{{../birthdayShort}}</dd>
                     </dl>
 
 

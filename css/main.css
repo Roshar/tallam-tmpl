@@ -574,7 +574,7 @@ input:focus {
   opacity: 0.2;
 }
 
-.footer__copyright p+p {
+.footer__copyright p + p {
   margin-top: 0.5em;
 }
 
@@ -750,7 +750,6 @@ input:focus {
 }
 
 @media print {
-
   .footer,
   .header__top-nav,
   .section-nav {

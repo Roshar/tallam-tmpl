@@ -1,92 +1,97 @@
-.main__teacher-profile {
-    display: flex;
-    column-gap: 30px;
-    row-gap: 24px;
+.wrapper-profile {
+  max-width: 1124px;
+  margin: 0 auto;
+  padding: 0 30px;
 }
 
+.main__teacher-profile {
+  display: flex;
+  column-gap: 30px;
+  row-gap: 24px;
+}
 
 .teacher-profile__photo {
-    max-width: 300px;
-    min-height: 350px;
-    padding: 20px;
-    background-color: var(--page-bg-light);
-    border-radius: 5px;
+  max-width: 300px;
+  max-height: 360px;
+  padding: 20px;
+  background-color: var(--page-bg-light);
+  border-radius: 5px;
 }
 
 .btn-upload {
-    display: block;
-    padding: 0;
-    border-radius: 5px;
-    background-color: transparent;
-    height: 60px;
-    border: 2px solid #8b99b3;
-    transition: all 0.2s ease-in;
-    cursor: pointer;
+  display: block;
+  padding: 0;
+  border-radius: 5px;
+  background-color: transparent;
+  height: 60px;
+  border: 2px solid #8b99b3;
+  transition: all 0.2s ease-in;
+  cursor: pointer;
 }
 
 .teacher-profile__img {
-    border-radius: 50%;
-    padding: 0;
+  border-radius: 50%;
+  padding: 0;
 }
 
 .teacher-profile__upload {
-    position: relative;
-    width: 100%;
-    color: #8b99b3;
+  position: relative;
+  width: 100%;
+  color: #8b99b3;
 }
 
-
 .teacher-profile__upload:hover {
-    color: #5c6b87;
+  color: #5c6b87;
 }
 
 .teacher-profile__upload img {
-    position: absolute;
-    top: 5px;
-    right: 15px;
-    width: 50px;
-
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  width: 50px;
 }
-
 
 .teacher-profile__photo img {
-    max-width: 100%;
-    padding: 0;
-
+  max-width: 100%;
+  padding: 0;
 }
 
-.teacher-profile__information-block {}
+.teacher-profile__information-block {
+}
 
 .block-info {
-    display: flex;
-    flex-direction: column;
-
-    flex-wrap: wrap;
-    padding: 25px 25px;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 0 40px 20px;
+  width: 100%;
+  border-left: 1px solid var(--page-bg-light);
 }
 
-.block-info__title {}
+.block-info__title {
+  margin: 0 0 30px;
+  font-size: 20px;
+  color: var(--text-color);
+}
 
 .block-info__header {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    margin: 0 0 10px 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin: 0 0 40px 0;
 }
 
 .block-info__key {
-    margin: 0 0 8px 0;
-    padding: 0;
-    display: flex;
-    box-sizing: border-box;
-    align-items: flex-end;
-    position: relative;
-    word-break: break-word;
-    color: #808d9a;
-    width: 25%;
-
+  margin: 0 0 8px 0;
+  padding: 0;
+  display: flex;
+  box-sizing: border-box;
+  align-items: flex-end;
+  position: relative;
+  word-break: break-word;
+  color: #808d9a;
+  width: 25%;
 }
 
 /* .block-info__key::before {
@@ -101,21 +106,21 @@
 } */
 
 .block-info__val {
-    width: 60%;
-    display: flex;
-    position: relative;
-    align-items: flex-end;
-    margin: 0 0 8px 0;
-    padding: 0 0 0 5px;
-    word-break: break-word;
+  width: 60%;
+  display: flex;
+  position: relative;
+  align-items: flex-end;
+  margin: 0 0 8px 0;
+  padding: 0 0 0 5px;
+  word-break: break-word;
 }
 
 .block-info__val::before {
-    content: "";
-    display: block;
-    width: 100%;
-    position: absolute;
-    left: 0;
-    top: 100%;
-    border-bottom: 1px dotted #d6dbe0;
+  content: "";
+  display: block;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  border-bottom: 1px dotted #d6dbe0;
 }
