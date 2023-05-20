@@ -41,10 +41,14 @@
         <div class="wrapper-profile">
             <h1 class="main__title title-profile"> Личный профиль</h1>
             <div class="main__teacher-profile teacher-profile">
-                <div class="teacher-profile__photo">
-                    <img class="teacher-profile__img" src="./img/icons/woman2.png" alt="photo">
-                    <!-- <button class="teacher-profile__upload btn-upload"> <img src="./img/icons/upload-dark.svg" alt="">
-                        <span class="hidden-mobile">Загрузить</span> </button> -->
+                <div class="teacher-profile__photo-container">
+                    <div class="teacher-profile__photo">
+                        <input class="visually-hidden teacher-profile__upload_file" type="file" name="image"
+                            accept="image/*" />
+                        <img class="teacher-profile__img avatar" src="./img/icons/woman2.png" alt="photo">
+                        <button class="teacher-profile__upload-btn" aria-label="загрузка изображения"
+                            aria-describedby="image"> </button>
+                    </div>
                 </div>
 
                 <div class="teacher-profile__information-block block-info">
@@ -137,6 +141,31 @@
         </div>
     </footer>
     <script src="./js/modal-mini.js"></script>
+    <script>
+        const FILE_INPUT = document.querySelector('.teacher-profile__upload_file');
+        console.log(FILE_INPUT);
+        const BTN_UPLOAD = document.querySelector('.teacher-profile__upload-btn');
+        const AVATAR = document.querySelector(".avatar");
+
+        BTN_UPLOAD.addEventListener('click', () => FILE_INPUT.click())
+
+        FILE_INPUT.addEventListener('change', (e) => {
+            const file = e.target.files[0]
+
+            const reader = new FileReader();
+            reader.readAsDataURL(file);
+
+            reader.onloadend = () => {
+                AVATAR.setAttribute("aria-label", file.name);
+                AVATAR.setAttribute("src", reader.result)
+            }
+        })
+
+
+
+
+
+    </script>
 </body>
 
 </html>

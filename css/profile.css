@@ -35,13 +35,7 @@
   row-gap: 24px;
 }
 
-.teacher-profile__photo {
-  max-width: 300px;
-  max-height: 360px;
-  padding: 20px;
-  /* background-color: var(--page-bg-light); */
-  /* border-radius: 5px; */
-}
+
 
 .btn-upload {
   display: block;
@@ -54,30 +48,38 @@
   cursor: pointer;
 }
 
+.teacher-profile__photo {
+  position: relative;
+  max-width: 300px;
+  padding: 0;
+}
+
 .teacher-profile__img {
+  width: 300px;
   border-radius: 50%;
   padding: 0;
 }
 
-.teacher-profile__upload {
-  position: relative;
-  width: 100%;
-  color: var(--profile-subtitle);
-}
 
-.teacher-profile__upload:hover {
-  color: var(--profile-subtitle);
-}
 
-.teacher-profile__upload img {
-  position: absolute;
-  top: 5px;
-  right: 15px;
+.teacher-profile__upload-btn {
+  border: none;
   width: 50px;
+  height: 50px;
+  background-size: cover;
+  position: absolute;
+  background-image: url('../img/icons/pngwing.com.png');
+  bottom: 10%;
+  right: 10%;
+  cursor: pointer;
+
+
 }
+
 
 .teacher-profile__photo img {
   max-width: 100%;
+
   padding: 0;
 }
 
@@ -180,9 +182,7 @@
     display: none;
   }
 
-  .teacher-profile__upload {
-    display: none;
-  }
+
 
   .teacher-profile__photo {
     max-height: 209px;
