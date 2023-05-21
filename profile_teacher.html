@@ -43,7 +43,7 @@
             <div class="main__teacher-profile teacher-profile">
                 <div class="teacher-profile__photo-container">
                     <div class="teacher-profile__photo">
-                        <input class="visually-hidden teacher-profile__upload_file" type="file" name="image"
+                        <input class="visually-hidden js-teacher-profile__upload_file" type="file" name="image"
                             accept="image/*" />
                         <img class="teacher-profile__img avatar" src="./img/icons/woman2.png" alt="photo">
                         <button class="teacher-profile__upload-btn" aria-label="загрузка изображения"
@@ -142,8 +142,7 @@
     </footer>
     <script src="./js/modal-mini.js"></script>
     <script>
-        const FILE_INPUT = document.querySelector('.teacher-profile__upload_file');
-        console.log(FILE_INPUT);
+        const FILE_INPUT = document.querySelector('.js-teacher-profile__upload_file');
         const BTN_UPLOAD = document.querySelector('.teacher-profile__upload-btn');
         const AVATAR = document.querySelector(".avatar");
 

@@ -1,4 +1,4 @@
-// Modal for tip 
+// Modal for tip
 
 const modalClassValue = document.querySelector(".modal");
 
