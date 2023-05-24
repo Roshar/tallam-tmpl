@@ -1,4 +1,4 @@
-.wrapper-profile {
+.container-small {
   max-width: 1124px;
   margin: 0 auto;
   padding: 0 30px;
@@ -44,19 +44,19 @@
   cursor: pointer;
 }
 
-.teacher-profile__photo {
+.teacher-profile__avatar_wrapper {
   position: relative;
   max-width: 300px;
   padding: 0;
 }
 
-.teacher-profile__img {
+.avatar__img {
   width: 300px;
   border-radius: 50%;
   padding: 0;
 }
 
-.teacher-profile__upload-btn {
+.avatar__upload-btn {
   border: none;
   width: 50px;
   height: 50px;
@@ -70,12 +70,10 @@
 
 .teacher-profile__photo img {
   max-width: 100%;
-
   padding: 0;
 }
 
-.teacher-profile__information-block {
-}
+.teacher-profile__information-block {}
 
 .block-info {
   display: flex;
@@ -125,17 +123,6 @@
   width: 25%;
 }
 
-/* .block-info__key::before {
-    content: "";
-    display: block;
-    width: 100%;
-    position: absolute;
-    left: 0;
-    bottom: .2em;
-
-    border-bottom: 1px dotted #d6dbe0;
-} */
-
 .block-info__val {
   width: 60%;
   display: flex;
@@ -162,11 +149,11 @@
 }
 
 @media (max-width: 790px) {
-  .teacher-profile__photo {
+  .teacher-profile__avatar_wrapper {
+    margin: 0 auto;
     max-width: 200px;
     max-height: 260px;
     padding: 20px;
-    background-color: var(--page-bg-light);
     border-radius: 5px;
   }
 
@@ -174,12 +161,26 @@
     display: none;
   }
 
-  .teacher-profile__photo {
-    max-height: 209px;
+  .avatar__upload-btn {
+    border: none;
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    position: absolute;
+    background-image: url("../img/icons/pngwing.com.png");
+    bottom: 18%;
+    right: 18%;
+    cursor: pointer;
   }
+
+  .block-info__delete {
+    display: flex;
+    align-self: center;
+  }
+
 }
 
-@media (max-width: 620px) {
+@media (max-width: 680px) {
   .main__teacher-profile {
     display: flex;
     flex-direction: column;
@@ -214,8 +215,5 @@
     justify-content: space-between;
   }
 
-  .block-info__delete {
-    display: flex;
-    align-self: center;
-  }
+
 }
